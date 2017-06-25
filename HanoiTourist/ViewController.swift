@@ -7,19 +7,29 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print("viewDidLoad")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showClient()
     }
-
-
+    
+    func showClient(){
+        let clientVC = UIStoryboard.init(name: "Client", bundle: nil).instantiateInitialViewController()!
+        
+        self.present(clientVC, animated: false, completion: nil)
+    }
 }
 
