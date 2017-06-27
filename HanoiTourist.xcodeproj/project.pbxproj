@@ -11,6 +11,7 @@
 		84153D711EFD27E30048D411 /* Client.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84153D701EFD27E30048D411 /* Client.storyboard */; };
 		84153D751EFD441F0048D411 /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D741EFD441F0048D411 /* SideMenuContainerViewController.swift */; };
 		84153D771EFD46230048D411 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D761EFD46230048D411 /* SideMenuTableViewController.swift */; };
+		8422000F1EFF71F100170315 /* NSManagedObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422000E1EFF71F100170315 /* NSManagedObjectFactory.swift */; };
 		84320F521EFCB2BE002B127C /* CompanyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F511EFCB2BE002B127C /* CompanyDAO.swift */; };
 		84320F541EFCBF85002B127C /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F531EFCBF85002B127C /* DAO.swift */; };
 		84320F561EFCC409002B127C /* DAOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F551EFCC409002B127C /* DAOProtocol.swift */; };
@@ -21,10 +22,17 @@
 		84320F601EFCD969002B127C /* ClientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F5F1EFCD969002B127C /* ClientDAO.swift */; };
 		84320F621EFCDF94002B127C /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F611EFCDF94002B127C /* EmployeeDAO.swift */; };
 		84320F641EFCE028002B127C /* TicketDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F631EFCE028002B127C /* TicketDAO.swift */; };
+		8432D7481F025A9B00C59604 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8432D7471F025A9B00C59604 /* Booking.storyboard */; };
+		8432D74A1F025DE400C59604 /* ListBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D7491F025DE400C59604 /* ListBookingViewController.swift */; };
+		8446C9301F01587A00EF86CD /* SeasonTourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446C92F1F01587A00EF86CD /* SeasonTourDAO.swift */; };
+		844864031F02126D006C5310 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844864021F02126D006C5310 /* Util.swift */; };
 		84528F141EFE0C330008BADE /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84528F131EFE0C330008BADE /* Company.storyboard */; };
 		84528F161EFE14E40008BADE /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84528F151EFE14E40008BADE /* CompanyViewController.swift */; };
 		84528F181EFE16220008BADE /* SideMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84528F171EFE16220008BADE /* SideMenuAction.swift */; };
+		84620BD41F02A8A2009CED07 /* TicketInfomation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84620BD31F02A8A1009CED07 /* TicketInfomation.xib */; };
+		84620BD61F02AFFC009CED07 /* TicketInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */; };
 		849859AF1EFEC5C5000B464C /* ListClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849859AE1EFEC5C5000B464C /* ListClientViewController.swift */; };
+		84D920201EFFFA7C00CC0626 /* InitDefaultDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */; };
 		84EB43211EF8E98900A294B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43201EF8E98900A294B3 /* AppDelegate.swift */; };
 		84EB43231EF8E98900A294B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43221EF8E98900A294B3 /* ViewController.swift */; };
 		84EB43261EF8E98900A294B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EB43241EF8E98900A294B3 /* Main.storyboard */; };
@@ -58,6 +66,7 @@
 		84153D701EFD27E30048D411 /* Client.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Client.storyboard; sourceTree = "<group>"; };
 		84153D741EFD441F0048D411 /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
 		84153D761EFD46230048D411 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		8422000E1EFF71F100170315 /* NSManagedObjectFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectFactory.swift; sourceTree = "<group>"; };
 		84320F511EFCB2BE002B127C /* CompanyDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDAO.swift; sourceTree = "<group>"; };
 		84320F531EFCBF85002B127C /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		84320F551EFCC409002B127C /* DAOProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProtocol.swift; sourceTree = "<group>"; };
@@ -68,10 +77,17 @@
 		84320F5F1EFCD969002B127C /* ClientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDAO.swift; sourceTree = "<group>"; };
 		84320F611EFCDF94002B127C /* EmployeeDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
 		84320F631EFCE028002B127C /* TicketDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDAO.swift; sourceTree = "<group>"; };
+		8432D7471F025A9B00C59604 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		8432D7491F025DE400C59604 /* ListBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBookingViewController.swift; sourceTree = "<group>"; };
+		8446C92F1F01587A00EF86CD /* SeasonTourDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTourDAO.swift; sourceTree = "<group>"; };
+		844864021F02126D006C5310 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		84528F131EFE0C330008BADE /* Company.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		84528F151EFE14E40008BADE /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		84528F171EFE16220008BADE /* SideMenuAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuAction.swift; sourceTree = "<group>"; };
+		84620BD31F02A8A1009CED07 /* TicketInfomation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketInfomation.xib; sourceTree = "<group>"; };
+		84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketInfomationView.swift; sourceTree = "<group>"; };
 		849859AE1EFEC5C5000B464C /* ListClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListClientViewController.swift; sourceTree = "<group>"; };
+		84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitDefaultDatabase.swift; sourceTree = "<group>"; };
 		84EB431D1EF8E98900A294B3 /* HanoiTourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanoiTourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB43201EF8E98900A294B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EB43221EF8E98900A294B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +138,7 @@
 				84153D6D1EFD1DAB0048D411 /* SideMenu.storyboard */,
 				84153D701EFD27E30048D411 /* Client.storyboard */,
 				84528F131EFE0C330008BADE /* Company.storyboard */,
+				8432D7471F025A9B00C59604 /* Booking.storyboard */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -150,8 +167,29 @@
 				84320F5F1EFCD969002B127C /* ClientDAO.swift */,
 				84320F611EFCDF94002B127C /* EmployeeDAO.swift */,
 				84320F631EFCE028002B127C /* TicketDAO.swift */,
+				8422000E1EFF71F100170315 /* NSManagedObjectFactory.swift */,
+				84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */,
+				8446C92F1F01587A00EF86CD /* SeasonTourDAO.swift */,
 			);
 			name = DAO;
+			sourceTree = "<group>";
+		};
+		8446C92B1F0144B600EF86CD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				844864021F02126D006C5310 /* Util.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		8446C92C1F0150A900EF86CD /* BookingController */ = {
+			isa = PBXGroup;
+			children = (
+				8432D7491F025DE400C59604 /* ListBookingViewController.swift */,
+				84620BD31F02A8A1009CED07 /* TicketInfomation.xib */,
+				84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */,
+			);
+			name = BookingController;
 			sourceTree = "<group>";
 		};
 		84528F111EFE03AD0008BADE /* SideMenuController */ = {
@@ -203,6 +241,8 @@
 		84EB431F1EF8E98900A294B3 /* HanoiTourist */ = {
 			isa = PBXGroup;
 			children = (
+				8446C92C1F0150A900EF86CD /* BookingController */,
+				8446C92B1F0144B600EF86CD /* Util */,
 				849859AD1EFEC59E000B464C /* ClientController */,
 				84528F121EFE0BFB0008BADE /* CompanyController */,
 				84528F111EFE03AD0008BADE /* SideMenuController */,
@@ -342,9 +382,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84153D6E1EFD1DAB0048D411 /* SideMenu.storyboard in Resources */,
+				8432D7481F025A9B00C59604 /* Booking.storyboard in Resources */,
 				84EB432E1EF8E98900A294B3 /* LaunchScreen.storyboard in Resources */,
 				84528F141EFE0C330008BADE /* Company.storyboard in Resources */,
 				84EB432B1EF8E98900A294B3 /* Assets.xcassets in Resources */,
+				84620BD41F02A8A2009CED07 /* TicketInfomation.xib in Resources */,
 				84153D711EFD27E30048D411 /* Client.storyboard in Resources */,
 				84EB43261EF8E98900A294B3 /* Main.storyboard in Resources */,
 			);
@@ -375,10 +417,13 @@
 				84EB43291EF8E98900A294B3 /* HanoiTourist.xcdatamodeld in Sources */,
 				84F7B2E11EFA5D4600C6C9C7 /* DataController.swift in Sources */,
 				84EB43231EF8E98900A294B3 /* ViewController.swift in Sources */,
+				8446C9301F01587A00EF86CD /* SeasonTourDAO.swift in Sources */,
 				84153D771EFD46230048D411 /* SideMenuTableViewController.swift in Sources */,
+				8432D74A1F025DE400C59604 /* ListBookingViewController.swift in Sources */,
 				84EB43211EF8E98900A294B3 /* AppDelegate.swift in Sources */,
 				84320F561EFCC409002B127C /* DAOProtocol.swift in Sources */,
 				84320F641EFCE028002B127C /* TicketDAO.swift in Sources */,
+				8422000F1EFF71F100170315 /* NSManagedObjectFactory.swift in Sources */,
 				84320F5A1EFCC956002B127C /* MemberCardDAO.swift in Sources */,
 				84320F5C1EFCCBD1002B127C /* BillDAO.swift in Sources */,
 				849859AF1EFEC5C5000B464C /* ListClientViewController.swift in Sources */,
@@ -388,8 +433,11 @@
 				84528F181EFE16220008BADE /* SideMenuAction.swift in Sources */,
 				84153D751EFD441F0048D411 /* SideMenuContainerViewController.swift in Sources */,
 				84528F161EFE14E40008BADE /* CompanyViewController.swift in Sources */,
+				844864031F02126D006C5310 /* Util.swift in Sources */,
+				84620BD61F02AFFC009CED07 /* TicketInfomationView.swift in Sources */,
 				84320F581EFCC94B002B127C /* TourDAO.swift in Sources */,
 				84320F521EFCB2BE002B127C /* CompanyDAO.swift in Sources */,
+				84D920201EFFFA7C00CC0626 /* InitDefaultDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ class EmployeeDAO: DAO {
     let id = "id"
     let name = "name"
     let address = "address"
-    let mail = "mail"
+    let email = "email"
     let phone = "phone"
     let username = "username"
     let password = "password"
@@ -26,14 +26,15 @@ class EmployeeDAO: DAO {
     let des = "des"
     
     override func getAll() -> [NSManagedObject]? {
-        print("getAllCompanyData")
+        print("getEmployeeData")
         do {
             let dataArray = try appDelegateManagerObjectContext.fetch(fetchRequest) as! [NSManagedObject]
             for data in dataArray {
                 print(data.value(forKey: id) as? Int ?? "nil id")
                 print(data.value(forKey: name) as? String ?? "nil")
                 print(data.value(forKey: address) as? String ?? "nil")
-                print(data.value(forKey: mail) as? String ?? "nil")
+                print(data.value(forKey: email) as? String ?? "nil")
+                print(data.value(forKey: phone) as? String ?? "nil")
                 print(data.value(forKey: username) as? String ?? "nil")
                 print(data.value(forKey: password) as? String ?? "nil")
                 print(data.value(forKey: position) as? String ?? "nil")

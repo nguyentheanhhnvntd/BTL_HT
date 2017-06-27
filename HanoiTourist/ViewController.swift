@@ -24,11 +24,20 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showClient()
+        showInfo()
     }
     
-    func showClient(){
+    func showInfo(){
+//        TourDAO.init().getAll()
+//        CompanyDAO.init().getAll()
+//        EmployeeDAO.init().getAll()
+//        ClientDAO.init().getAll()
+//        MemberCardDAO.init().getAll()
+        SeasonTourDAO.init().getAll()
+    }
+    
+    func showClient() {
         let clientVC = UIStoryboard.init(name: "Client", bundle: nil).instantiateInitialViewController()!
-        
         self.present(clientVC, animated: false, completion: nil)
     }
 }

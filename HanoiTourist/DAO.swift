@@ -11,8 +11,8 @@ import CoreData
 
 class DAO: DAOProtocol {
     
-    let appDelegateManagerObjectContext : NSManagedObjectContext!
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+    var appDelegateManagerObjectContext : NSManagedObjectContext!
+    var fetchRequest = NSFetchRequest<NSFetchRequestResult>()
     var entityDescription: NSEntityDescription!
     var entityName: String {
         return "entityName"
@@ -20,16 +20,6 @@ class DAO: DAOProtocol {
     
     init() {
         appDelegateManagerObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        guard let modelURL = Bundle.main.url(forResource: "HanoiTourist", withExtension:"momd") else {
-//            fatalError("Error loading model from bundle")
-//        }
-//        // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
-//        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
-//            fatalError("Error initializing mom from: \(modelURL)")
-//        }
-//        let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
-//        appDelegateManagerObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
-//        appDelegateManagerObjectContext.persistentStoreCoordinator = psc
         
         entityDescription = NSEntityDescription.entity(forEntityName: entityName, in: appDelegateManagerObjectContext)
         fetchRequest.entity = entityDescription
@@ -48,6 +38,7 @@ class DAO: DAOProtocol {
             return true
         } catch {
             print("Error occured during save entity")
+            print(error)
             return false
         }
     }

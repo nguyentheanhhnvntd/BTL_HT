@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Bill" representedClassName="Bill" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="payDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="payType" attributeType="String" syncable="YES"/>
-        <relationship name="booking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Booking" inverseName="bills" inverseEntity="Booking" syncable="YES"/>
-        <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="bills" inverseEntity="Employee" syncable="YES"/>
+        <relationship name="booking" maxCount="1" deletionRule="Nullify" destinationEntity="Booking" inverseName="bills" inverseEntity="Booking" syncable="YES"/>
+        <relationship name="employee" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="bills" inverseEntity="Employee" syncable="YES"/>
     </entity>
     <entity name="Booking" representedClassName="Booking" syncable="YES" codeGenerationType="class">
         <attribute name="bookingDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="payed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="bills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bill" inverseName="booking" inverseEntity="Bill" syncable="YES"/>
-        <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client" inverseName="bookings" inverseEntity="Client" syncable="YES"/>
-        <relationship name="tickets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="booking" inverseEntity="Ticket" syncable="YES"/>
+        <relationship name="client" maxCount="1" deletionRule="Nullify" destinationEntity="Client" inverseName="bookings" inverseEntity="Client" syncable="YES"/>
+        <relationship name="tickets" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="booking" inverseEntity="Ticket" syncable="YES"/>
     </entity>
     <entity name="Client" representedClassName="Client" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="bookings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Booking" inverseName="client" inverseEntity="Booking" syncable="YES"/>
-        <relationship name="memberCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MemberCard" inverseName="clients" inverseEntity="MemberCard" syncable="YES"/>
+        <relationship name="memberCard" maxCount="1" deletionRule="Nullify" destinationEntity="MemberCard" inverseName="clients" inverseEntity="MemberCard" syncable="YES"/>
     </entity>
     <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String" syncable="YES"/>
@@ -34,10 +34,9 @@
         <relationship name="tours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tour" inverseName="company" inverseEntity="Tour" syncable="YES"/>
     </entity>
     <entity name="Employee" representedClassName="Employee" parentEntity="Person" syncable="YES" codeGenerationType="class">
-        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="password" attributeType="String" syncable="YES"/>
-        <attribute name="postion" attributeType="String" syncable="YES"/>
+        <attribute name="position" attributeType="String" syncable="YES"/>
         <attribute name="username" attributeType="String" syncable="YES"/>
         <relationship name="bills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bill" inverseName="employee" inverseEntity="Bill" syncable="YES"/>
     </entity>
@@ -49,36 +48,48 @@
     </entity>
     <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" optional="YES" attributeType="String" regularExpressionString="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}" syncable="YES"/>
+        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" regularExpressionString="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}+.[A-Za-z]{2,}" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Ticket" representedClassName="Ticket" syncable="YES" codeGenerationType="class">
-        <attribute name="endDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    <entity name="SeasonTour" representedClassName="SeasonTour" syncable="YES" codeGenerationType="class">
+        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="quantity" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="ticket" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="seasonTour" inverseEntity="Ticket" syncable="YES"/>
+        <relationship name="tour" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="seasonTour" inverseEntity="Tour" syncable="YES"/>
+    </entity>
+    <entity name="Ticket" representedClassName="Ticket" syncable="YES" codeGenerationType="class">
+        <attribute name="adultSlot" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="childrenSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="booking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Booking" inverseName="tickets" inverseEntity="Booking" syncable="YES"/>
-        <relationship name="tour" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="tickets" inverseEntity="Tour" syncable="YES"/>
+        <relationship name="seasonTour" maxCount="1" deletionRule="Nullify" destinationEntity="SeasonTour" inverseName="ticket" inverseEntity="SeasonTour" syncable="YES"/>
     </entity>
     <entity name="Tour" representedClassName="Tour" syncable="YES" codeGenerationType="class">
         <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="from" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="to" attributeType="String" syncable="YES"/>
         <relationship name="company" maxCount="1" deletionRule="Nullify" destinationEntity="Company" inverseName="tours" inverseEntity="Company" syncable="YES"/>
-        <relationship name="tickets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="tour" inverseEntity="Ticket" syncable="YES"/>
+        <relationship name="seasonTour" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SeasonTour" inverseName="tour" inverseEntity="SeasonTour" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Bill" positionX="-315" positionY="-117" width="128" height="150"/>
-        <element name="Booking" positionX="-281" positionY="126" width="128" height="150"/>
-        <element name="Client" positionX="-47" positionY="-129" width="128" height="90"/>
-        <element name="Company" positionX="-531" positionY="-307" width="128" height="163"/>
-        <element name="Employee" positionX="-308" positionY="-324" width="128" height="135"/>
-        <element name="MemberCard" positionX="-56" positionY="50" width="128" height="105"/>
-        <element name="Person" positionX="-45" positionY="-315" width="128" height="103"/>
-        <element name="Ticket" positionX="-531" positionY="113" width="128" height="150"/>
-        <element name="Tour" positionX="-522" positionY="-100" width="128" height="135"/>
+        <element name="Bill" positionX="-333" positionY="-189" width="128" height="135"/>
+        <element name="Booking" positionX="-360" positionY="-18" width="128" height="163"/>
+        <element name="Client" positionX="-47" positionY="-207" width="128" height="90"/>
+        <element name="Company" positionX="-587" positionY="-360" width="128" height="163"/>
+        <element name="Employee" positionX="-324" positionY="-360" width="128" height="120"/>
+        <element name="MemberCard" positionX="-45" positionY="-54" width="128" height="105"/>
+        <element name="Person" positionX="-45" positionY="-360" width="128" height="120"/>
+        <element name="SeasonTour" positionX="-837" positionY="-117" width="128" height="163"/>
+        <element name="Ticket" positionX="-585" positionY="-145" width="128" height="135"/>
+        <element name="Tour" positionX="-801" positionY="-342" width="128" height="148"/>
     </elements>
 </model>

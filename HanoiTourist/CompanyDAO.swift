@@ -20,6 +20,8 @@ class CompanyDAO: DAO {
     let name = "name"
     let rating = "rating"
     let des = "des"
+    let owner = "owner"
+    let phonenum = "phonenum"
     
     override init() {
         super.init()
@@ -35,6 +37,8 @@ class CompanyDAO: DAO {
                 print(data.value(forKey: name) as? String ?? "nil name")
                 print(data.value(forKey: rating) as? Int ?? "nil rating")
                 print(data.value(forKey: des) as? String ?? "nil des")
+                print(data.value(forKey: owner) as? String ?? "nil owner")
+                print(data.value(forKey: phonenum) as? String ?? "nil des")
             }
             var mo = [Company]()
             mo.append(dataArray.first as! Company)

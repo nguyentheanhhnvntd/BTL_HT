@@ -1,40 +1,41 @@
 //
-//  TourDAO.swift
+//  SeasonTourDAO.swift
 //  HanoiTourist
 //
-//  Created by Thế Anh Nguyễn on 6/23/17.
+//  Created by Thế Anh Nguyễn on 6/26/17.
 //  Copyright © 2017 Thế Anh Nguyễn. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class TourDAO: DAO {
+class SeasonTourDAO: DAO {
     
     override var entityName: String {
-        return "Tour"
+        return "SeasonTour"
     }
     
     let id = "id"
-    let from = "from"
-    let to = "to"
-    let duration = "duration"
-    let des = "des"
+    let start = "start"
+    let end = "end"
+    let totalSlot = "totalSlot"
     let price = "price"
+    let des = "des"
     
     override func getAll() -> [NSManagedObject]? {
-        print("getAllTourData")
+        print("getAllSeasonTourData")
         do {
             let dataArray = try appDelegateManagerObjectContext.fetch(fetchRequest) as! [NSManagedObject]
-            print(dataArray.count)
             for data in dataArray {
                 print(data.value(forKey: id) as? Int ?? "nil id")
-                print(data.value(forKey: from) as? String ?? "nil from")
-                print(data.value(forKey: to) as? String ?? "nil to")
-                print(data.value(forKey: duration) as? String ?? "nil to")
+                print(data.value(forKey: start) as? Date ?? "nil start")
+                print(data.value(forKey: end) as? Date ?? "nil end")
+                print(data.value(forKey: totalSlot) as? Int ?? "nil totalSlot")
+                print(data.value(forKey: price) as? Double ?? "nil price")
                 print(data.value(forKey: des) as? String ?? "nil des")
+                print((data as! SeasonTour).tour?.to)
             }
-
+            
             return dataArray
         } catch {
             let fetchError = error as NSError
@@ -43,3 +44,4 @@ class TourDAO: DAO {
         }
     }
 }
+

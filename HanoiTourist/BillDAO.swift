@@ -17,7 +17,6 @@ class BillDAO: DAO {
     
     let id = "id"
     let note = "note"
-    let amount = "amount"
     let payType = "payType"
     let payDate = "payDate"
     
@@ -28,7 +27,6 @@ class BillDAO: DAO {
             for data in dataArray {
                 print(data.value(forKey: id) as? Int ?? "nil id")
                 print(data.value(forKey: note) as? String ?? "nil")
-                print(data.value(forKey: amount) as? String ?? "nil")
                 print(data.value(forKey: payType) as? String ?? "nil")
                 print(data.value(forKey: payDate) as? Date ?? "nil")
                 print((data as! Bill).employee!.name!)
