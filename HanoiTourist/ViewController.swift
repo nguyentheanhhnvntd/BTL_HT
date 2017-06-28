@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showClient()
-        showInfo()
+        showBooking()
     }
     
     func showInfo(){
@@ -33,12 +32,15 @@ class ViewController: UIViewController {
 //        EmployeeDAO.init().getAll()
 //        ClientDAO.init().getAll()
 //        MemberCardDAO.init().getAll()
-        SeasonTourDAO.init().getAll()
+//        SeasonTourDAO.init().getAll()
     }
     
     func showClient() {
-        let clientVC = UIStoryboard.init(name: "Client", bundle: nil).instantiateInitialViewController()!
-        self.present(clientVC, animated: false, completion: nil)
+        SidemenuAction.showClient(currentViewController: self)
+    }
+    
+    func showBooking() {
+        SidemenuAction.showBooking(currentViewController: self)
     }
 }
 

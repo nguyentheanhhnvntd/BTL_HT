@@ -11,7 +11,7 @@
     <entity name="Booking" representedClassName="Booking" syncable="YES" codeGenerationType="class">
         <attribute name="bookingDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="payed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="paid" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="bills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bill" inverseName="booking" inverseEntity="Bill" syncable="YES"/>
@@ -82,7 +82,7 @@
     </entity>
     <elements>
         <element name="Bill" positionX="-333" positionY="-189" width="128" height="135"/>
-        <element name="Booking" positionX="-360" positionY="-18" width="128" height="163"/>
+        <element name="Booking" positionX="-360" positionY="-18" width="128" height="165"/>
         <element name="Client" positionX="-47" positionY="-207" width="128" height="90"/>
         <element name="Company" positionX="-587" positionY="-360" width="128" height="163"/>
         <element name="Employee" positionX="-324" positionY="-360" width="128" height="120"/>

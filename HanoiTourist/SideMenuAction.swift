@@ -17,6 +17,12 @@ class SidemenuAction {
         currentViewController.present(sideMenuVC, animated: false, completion: nil)
     }
     
+    static func showBooking(currentViewController: UIViewController){
+        let bookingVC = UIStoryboard.init(name: "Booking", bundle: nil).instantiateInitialViewController()!
+        currentViewController.dismiss(animated: false, completion: nil)
+        currentViewController.present(bookingVC, animated: true, completion: nil)
+    }
+    
     static func showClient(currentViewController: UIViewController){
         let clientVC = UIStoryboard.init(name: "Client", bundle: nil).instantiateInitialViewController()!
         currentViewController.dismiss(animated: false, completion: nil)

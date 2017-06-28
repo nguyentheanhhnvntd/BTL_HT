@@ -57,13 +57,12 @@ class SideMenuTableViewController: UITableViewController {
         
     }
     func showBooking(){
-        
+        SidemenuAction.showBooking(currentViewController: self.currentVC)
     }
     func showBill(){
         
     }
     func showClent(){
-//        self.dismiss(animated: false, completion: nil)
         SidemenuAction.showClient(currentViewController: self.currentVC)
         
     }
