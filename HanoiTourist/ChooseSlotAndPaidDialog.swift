@@ -53,5 +53,19 @@ class ChooseSlotAndPaidDialog: UIViewController, UITextFieldDelegate {
             return false
         }
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        var money: Double = 0
+        if let adult = Int(adultSlotTextField.text!) {
+            money += Double(adult) * seasonTour.price
+            ticket.adultSlot = Int16.init(exactly: adult)!
+        }
+        if let children = Int(childrenSlotTextField.text!) {
+            money += Double(children) * seasonTour.price / 2
+            ticket.childrenSlot = Int16.init(exactly: children)!
+        }
+        totalPrice.text = "\(money) vnd"
+        ticket.price = money
+    }
 
 }

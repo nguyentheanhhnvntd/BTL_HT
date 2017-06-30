@@ -261,7 +261,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="infoView" destination="PVE-CI-tjt" id="Sma-t3-Tuh"/>
+                        <outlet property="infoView" destination="PVE-CI-tjt" id="gaF-em-acg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0P-Kl-QE9" userLabel="First Responder" sceneMemberID="firstResponder"/>

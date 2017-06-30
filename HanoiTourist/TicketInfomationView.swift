@@ -21,10 +21,20 @@ class TicketInfomationView: UIView {
     @IBOutlet weak var childrenSlot: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     
+    class func instanceFromNib() -> TicketInfomationView {
+        return UINib(nibName: "TicketInfomationView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TicketInfomationView
+    }
+    
     func setInfo() {
         if let seasonTour = ticket.seasonTour {
-            startDate.text = (String(describing: seasonTour.start))
-            endDate.text = (String(describing: seasonTour.end))
+            
+            let startDateStr = String(describing: seasonTour.start!)
+            let index = startDateStr.characters.index(of: " ")!
+            startDate.text = "Start: " + startDateStr.substring(to: index)
+            
+            let endDateStr = String(describing: seasonTour.end!)
+            endDate.text = "End: " + endDateStr.substring(to: index)
+            
             if let tour = seasonTour.tour {
                 startPlace.text = tour.from
                 destPlace.text = tour.to
@@ -34,7 +44,7 @@ class TicketInfomationView: UIView {
         }
         adultSlot.text = String(describing: ticket.adultSlot)
         childrenSlot.text = String(describing: ticket.childrenSlot)
-        totalPrice.text = String(describing: ticket.price)
+        totalPrice.text = String(describing: ticket.price) + " vnd"
     }
     
 

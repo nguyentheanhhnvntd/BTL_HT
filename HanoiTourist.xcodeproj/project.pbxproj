@@ -38,10 +38,18 @@
 		84528F141EFE0C330008BADE /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84528F131EFE0C330008BADE /* Company.storyboard */; };
 		84528F161EFE14E40008BADE /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84528F151EFE14E40008BADE /* CompanyViewController.swift */; };
 		84528F181EFE16220008BADE /* SideMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84528F171EFE16220008BADE /* SideMenuAction.swift */; };
-		84620BD41F02A8A2009CED07 /* TicketInfomation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84620BD31F02A8A1009CED07 /* TicketInfomation.xib */; };
+		84620BD41F02A8A2009CED07 /* TicketInfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84620BD31F02A8A1009CED07 /* TicketInfomationView.xib */; };
 		84620BD61F02AFFC009CED07 /* TicketInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */; };
 		849859AF1EFEC5C5000B464C /* ListClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849859AE1EFEC5C5000B464C /* ListClientViewController.swift */; };
 		84A1D5E81F03D26F00527BED /* AddBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D5E71F03D26F00527BED /* AddBookingViewController.swift */; };
+		84B456B91F04A819004A23FF /* ClientInfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B456B81F04A819004A23FF /* ClientInfomationView.xib */; };
+		84B456BB1F04A838004A23FF /* ClientInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B456BA1F04A838004A23FF /* ClientInfomationView.swift */; };
+		84B456BD1F04AB14004A23FF /* FindClientByNameDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B456BC1F04AB14004A23FF /* FindClientByNameDialog.storyboard */; };
+		84B456BF1F04ACE3004A23FF /* ListClientContainerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B456BE1F04ACE3004A23FF /* ListClientContainerDialog.swift */; };
+		84B456C11F04ACF3004A23FF /* ListClientDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B456C01F04ACF3004A23FF /* ListClientDialog.swift */; };
+		84B456C41F04AF29004A23FF /* ClientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B456C21F04AF29004A23FF /* ClientTableViewCell.swift */; };
+		84B456C51F04AF29004A23FF /* ClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B456C31F04AF29004A23FF /* ClientTableViewCell.xib */; };
+		84B456C71F04B3D8004A23FF /* FindClientByNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B456C61F04B3D8004A23FF /* FindClientByNameDialog.swift */; };
 		84D920201EFFFA7C00CC0626 /* InitDefaultDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */; };
 		84EB43211EF8E98900A294B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43201EF8E98900A294B3 /* AppDelegate.swift */; };
 		84EB43231EF8E98900A294B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43221EF8E98900A294B3 /* ViewController.swift */; };
@@ -103,10 +111,18 @@
 		84528F131EFE0C330008BADE /* Company.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		84528F151EFE14E40008BADE /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		84528F171EFE16220008BADE /* SideMenuAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuAction.swift; sourceTree = "<group>"; };
-		84620BD31F02A8A1009CED07 /* TicketInfomation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketInfomation.xib; sourceTree = "<group>"; };
+		84620BD31F02A8A1009CED07 /* TicketInfomationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketInfomationView.xib; sourceTree = "<group>"; };
 		84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketInfomationView.swift; sourceTree = "<group>"; };
 		849859AE1EFEC5C5000B464C /* ListClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListClientViewController.swift; sourceTree = "<group>"; };
 		84A1D5E71F03D26F00527BED /* AddBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookingViewController.swift; sourceTree = "<group>"; };
+		84B456B81F04A819004A23FF /* ClientInfomationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientInfomationView.xib; sourceTree = "<group>"; };
+		84B456BA1F04A838004A23FF /* ClientInfomationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInfomationView.swift; sourceTree = "<group>"; };
+		84B456BC1F04AB14004A23FF /* FindClientByNameDialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FindClientByNameDialog.storyboard; sourceTree = "<group>"; };
+		84B456BE1F04ACE3004A23FF /* ListClientContainerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListClientContainerDialog.swift; sourceTree = "<group>"; };
+		84B456C01F04ACF3004A23FF /* ListClientDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListClientDialog.swift; sourceTree = "<group>"; };
+		84B456C21F04AF29004A23FF /* ClientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTableViewCell.swift; sourceTree = "<group>"; };
+		84B456C31F04AF29004A23FF /* ClientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientTableViewCell.xib; sourceTree = "<group>"; };
+		84B456C61F04B3D8004A23FF /* FindClientByNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindClientByNameDialog.swift; sourceTree = "<group>"; };
 		84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitDefaultDatabase.swift; sourceTree = "<group>"; };
 		84EB431D1EF8E98900A294B3 /* HanoiTourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanoiTourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB43201EF8E98900A294B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,8 +169,14 @@
 		841302021F035820008D669C /* CustomObject */ = {
 			isa = PBXGroup;
 			children = (
+				84620BD31F02A8A1009CED07 /* TicketInfomationView.xib */,
+				84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */,
 				841302031F03583B008D669C /* TicketTableViewCell.swift */,
 				841302041F03583B008D669C /* TicketTableViewCell.xib */,
+				84B456B81F04A819004A23FF /* ClientInfomationView.xib */,
+				84B456BA1F04A838004A23FF /* ClientInfomationView.swift */,
+				84B456C21F04AF29004A23FF /* ClientTableViewCell.swift */,
+				84B456C31F04AF29004A23FF /* ClientTableViewCell.xib */,
 			);
 			name = CustomObject;
 			sourceTree = "<group>";
@@ -167,6 +189,9 @@
 				8413020C1F036E88008D669C /* DetailSeasonTourDialog.swift */,
 				840F1BFE1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift */,
 				840F1C001F040EA700D144F9 /* ChooseSlotAndPaidDialog.swift */,
+				84B456BE1F04ACE3004A23FF /* ListClientContainerDialog.swift */,
+				84B456C01F04ACF3004A23FF /* ListClientDialog.swift */,
+				84B456C61F04B3D8004A23FF /* FindClientByNameDialog.swift */,
 			);
 			name = Dialog;
 			sourceTree = "<group>";
@@ -181,6 +206,7 @@
 				84528F131EFE0C330008BADE /* Company.storyboard */,
 				8432D7471F025A9B00C59604 /* Booking.storyboard */,
 				841302001F03533B008D669C /* FindSeasonTourDialog.storyboard */,
+				84B456BC1F04AB14004A23FF /* FindClientByNameDialog.storyboard */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -228,8 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				8432D7491F025DE400C59604 /* ListBookingViewController.swift */,
-				84620BD31F02A8A1009CED07 /* TicketInfomation.xib */,
-				84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */,
 				841301FA1F035294008D669C /* FindTicketDialogViewController.swift */,
 				84A1D5E71F03D26F00527BED /* AddBookingViewController.swift */,
 			);
@@ -427,13 +451,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B456BD1F04AB14004A23FF /* FindClientByNameDialog.storyboard in Resources */,
 				84153D6E1EFD1DAB0048D411 /* SideMenu.storyboard in Resources */,
 				8432D7481F025A9B00C59604 /* Booking.storyboard in Resources */,
 				84EB432E1EF8E98900A294B3 /* LaunchScreen.storyboard in Resources */,
 				84528F141EFE0C330008BADE /* Company.storyboard in Resources */,
+				84B456B91F04A819004A23FF /* ClientInfomationView.xib in Resources */,
 				84EB432B1EF8E98900A294B3 /* Assets.xcassets in Resources */,
-				84620BD41F02A8A2009CED07 /* TicketInfomation.xib in Resources */,
+				84620BD41F02A8A2009CED07 /* TicketInfomationView.xib in Resources */,
 				84153D711EFD27E30048D411 /* Client.storyboard in Resources */,
+				84B456C51F04AF29004A23FF /* ClientTableViewCell.xib in Resources */,
 				841302061F03583B008D669C /* TicketTableViewCell.xib in Resources */,
 				841302011F03533B008D669C /* FindSeasonTourDialog.storyboard in Resources */,
 				84EB43261EF8E98900A294B3 /* Main.storyboard in Resources */,
@@ -461,8 +488,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B456C11F04ACF3004A23FF /* ListClientDialog.swift in Sources */,
 				840F1BFF1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift in Sources */,
 				84A1D5E81F03D26F00527BED /* AddBookingViewController.swift in Sources */,
+				84B456C41F04AF29004A23FF /* ClientTableViewCell.swift in Sources */,
+				84B456BF1F04ACE3004A23FF /* ListClientContainerDialog.swift in Sources */,
 				84320F541EFCBF85002B127C /* DAO.swift in Sources */,
 				84EB43291EF8E98900A294B3 /* HanoiTourist.xcdatamodeld in Sources */,
 				84F7B2E11EFA5D4600C6C9C7 /* DataController.swift in Sources */,
@@ -476,6 +506,7 @@
 				8432D74A1F025DE400C59604 /* ListBookingViewController.swift in Sources */,
 				84EB43211EF8E98900A294B3 /* AppDelegate.swift in Sources */,
 				84320F561EFCC409002B127C /* DAOProtocol.swift in Sources */,
+				84B456BB1F04A838004A23FF /* ClientInfomationView.swift in Sources */,
 				84320F641EFCE028002B127C /* TicketDAO.swift in Sources */,
 				8422000F1EFF71F100170315 /* NSManagedObjectFactory.swift in Sources */,
 				84320F5A1EFCC956002B127C /* MemberCardDAO.swift in Sources */,
@@ -492,6 +523,7 @@
 				84620BD61F02AFFC009CED07 /* TicketInfomationView.swift in Sources */,
 				84320F581EFCC94B002B127C /* TourDAO.swift in Sources */,
 				841302051F03583B008D669C /* TicketTableViewCell.swift in Sources */,
+				84B456C71F04B3D8004A23FF /* FindClientByNameDialog.swift in Sources */,
 				84320F521EFCB2BE002B127C /* CompanyDAO.swift in Sources */,
 				84D920201EFFFA7C00CC0626 /* InitDefaultDatabase.swift in Sources */,
 			);

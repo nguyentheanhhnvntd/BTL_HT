@@ -72,4 +72,20 @@ extension UIViewController {
         }, completion: {(isCompleted) in
             toastLabel.removeFromSuperview()
         })
-    } }
+    }
+}
+
+extension UIView {
+    
+    @discardableResult   // 1
+    func fromNib<T : UIView>(nibName: String) -> T? {   // 2
+        guard let view = Bundle.main.loadNibNamed(nibName, owner: self, options: nil)?[0] as? T else {    // 3
+            // xib not loaded, or it's top view is of the wrong type
+            return nil
+        }
+        self.addSubview(view)     // 4
+        view.translatesAutoresizingMaskIntoConstraints = false   // 5
+//        view.layoutAttachAll(to: self)   // 6
+        return view   // 7
+    }
+}

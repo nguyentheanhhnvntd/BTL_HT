@@ -14,6 +14,9 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     var listSeasonTourToShow = [SeasonTour]()
     var choosenSeasonTour: SeasonTour!
     
+    var ticketInfomationView: TicketInfomationView!
+    var clientInfomationView: ClientInfomationView!
+    
     @IBAction func dismiss(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -46,12 +49,29 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     }
     
     @IBAction func setClentInfo(_ sender: UIButton) {
+        print("setClentInfo")
+        let findClientByNameContainerDialog = UIStoryboard.init(name: "FindClientByNameDialog", bundle: nil).instantiateInitialViewController() as! ListClientContainerDialog
+//        findClientByNameContainerDialog.delegate = self
+//        findClientByNameContainerDialog.listSeasonTour = listSeasonTourToShow
+        findClientByNameContainerDialog.modalPresentationStyle = .overCurrentContext
+        self.present(findClientByNameContainerDialog, animated: false, completion: nil)
     }
     
     @IBOutlet weak var infoView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ticketInfomationView = TicketInfomationView.instanceFromNib()
+        ticketInfomationView.isHidden = true
+        ticketInfomationView.frame.size = infoView.frame.size
+        ticketInfomationView.frame.origin = CGPoint.zero
+        infoView.addSubview(ticketInfomationView)
+        
+        clientInfomationView = ClientInfomationView.instanceFromNib()
+        clientInfomationView.isHidden = false
+        clientInfomationView.frame.size = infoView.frame.size
+        clientInfomationView.frame.origin = CGPoint.zero
+        infoView.addSubview(clientInfomationView)
     }
 
     func choose(seasonTour: SeasonTour) {
@@ -70,6 +90,9 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     }
     
     func comfirm(ticket: Ticket, paid: Bool) {
-        
+        ticketInfomationView.ticket = ticket
+        ticketInfomationView.setInfo()
+        clientInfomationView.isHidden = true
+        ticketInfomationView.isHidden = false
     }
 }
