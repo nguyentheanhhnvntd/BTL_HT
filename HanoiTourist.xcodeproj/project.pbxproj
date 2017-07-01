@@ -34,6 +34,8 @@
 		8432D7481F025A9B00C59604 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8432D7471F025A9B00C59604 /* Booking.storyboard */; };
 		8432D74A1F025DE400C59604 /* ListBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D7491F025DE400C59604 /* ListBookingViewController.swift */; };
 		8446C9301F01587A00EF86CD /* SeasonTourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446C92F1F01587A00EF86CD /* SeasonTourDAO.swift */; };
+		8447DB651F07761A00201E8F /* ConfirmSaveBookingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447DB641F07761A00201E8F /* ConfirmSaveBookingDialog.swift */; };
+		8447DB671F07836D00201E8F /* ChoosePayTypeDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447DB661F07836D00201E8F /* ChoosePayTypeDialog.swift */; };
 		844864031F02126D006C5310 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844864021F02126D006C5310 /* Util.swift */; };
 		84528F141EFE0C330008BADE /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84528F131EFE0C330008BADE /* Company.storyboard */; };
 		84528F161EFE14E40008BADE /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84528F151EFE14E40008BADE /* CompanyViewController.swift */; };
@@ -107,6 +109,8 @@
 		8432D7471F025A9B00C59604 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		8432D7491F025DE400C59604 /* ListBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBookingViewController.swift; sourceTree = "<group>"; };
 		8446C92F1F01587A00EF86CD /* SeasonTourDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTourDAO.swift; sourceTree = "<group>"; };
+		8447DB641F07761A00201E8F /* ConfirmSaveBookingDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmSaveBookingDialog.swift; sourceTree = "<group>"; };
+		8447DB661F07836D00201E8F /* ChoosePayTypeDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePayTypeDialog.swift; sourceTree = "<group>"; };
 		844864021F02126D006C5310 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		84528F131EFE0C330008BADE /* Company.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		84528F151EFE14E40008BADE /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				84B456BE1F04ACE3004A23FF /* ListClientContainerDialog.swift */,
 				84B456C01F04ACF3004A23FF /* ListClientDialog.swift */,
 				84B456C61F04B3D8004A23FF /* FindClientByNameDialog.swift */,
+				8447DB641F07761A00201E8F /* ConfirmSaveBookingDialog.swift */,
+				8447DB661F07836D00201E8F /* ChoosePayTypeDialog.swift */,
 			);
 			name = Dialog;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8447DB651F07761A00201E8F /* ConfirmSaveBookingDialog.swift in Sources */,
 				84B456C11F04ACF3004A23FF /* ListClientDialog.swift in Sources */,
 				840F1BFF1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift in Sources */,
 				84A1D5E81F03D26F00527BED /* AddBookingViewController.swift in Sources */,
@@ -496,6 +503,7 @@
 				84320F541EFCBF85002B127C /* DAO.swift in Sources */,
 				84EB43291EF8E98900A294B3 /* HanoiTourist.xcdatamodeld in Sources */,
 				84F7B2E11EFA5D4600C6C9C7 /* DataController.swift in Sources */,
+				8447DB671F07836D00201E8F /* ChoosePayTypeDialog.swift in Sources */,
 				84EB43231EF8E98900A294B3 /* ViewController.swift in Sources */,
 				841302091F03679E008D669C /* ListSeasonTourDialog.swift in Sources */,
 				8446C9301F01587A00EF86CD /* SeasonTourDAO.swift in Sources */,

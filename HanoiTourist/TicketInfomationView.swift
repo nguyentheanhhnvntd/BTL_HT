@@ -8,9 +8,23 @@
 
 import UIKit
 
+protocol TicketInfomationViewDelegate {
+    func findMore()
+    func delete(ticket: Ticket)
+}
+
 class TicketInfomationView: UIView {
+    
+
+    @IBAction func deleteTicket(_ sender: UIButton) {
+        delegate.delete(ticket: ticket)
+    }
+    @IBAction func findMore(_ sender: UIButton) {
+        delegate.findMore()
+    }
 
     var ticket: Ticket!
+    var delegate: TicketInfomationViewDelegate!
     
     @IBOutlet weak var startPlace: UILabel!
     @IBOutlet weak var destPlace: UILabel!

@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ClientTableViewCellDelegate {
+    func choose(client: Client)
+}
 class ClientTableViewCell: UITableViewCell {
+    
+    var client: Client!
+    var delegate: ClientTableViewCellDelegate!
     
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var memberCardType: UILabel!
@@ -17,5 +23,12 @@ class ClientTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.addGestureRecognizer(UILongPressGestureRecognizer.init(target: self, action: #selector(longPressed)))
     }
+    
+    func longPressed() {
+        delegate.choose(client: client)
+    }
+    
+    
 }

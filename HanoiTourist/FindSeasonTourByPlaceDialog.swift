@@ -28,6 +28,7 @@ class FindSeasonTourByPlaceDialog: UIViewController {
     @IBOutlet weak var startPlace: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        startPlace.becomeFirstResponder()
     }
 
 }

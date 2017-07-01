@@ -25,6 +25,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-v3-2uh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.2490368151" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="uXD-YT-taS" eventType="touchUpInside" id="RJG-4m-Y0N"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-hH-WxQ">
                                 <rect key="frame" x="32" y="283" width="310" height="100"/>
@@ -35,7 +38,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="The Anh" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-Ql-Wef">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-Ql-Wef">
                                         <rect key="frame" x="140" y="11.5" width="154" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,10 +51,16 @@
                                             <constraint firstAttribute="height" constant="30" id="Ssw-Qn-lQw"/>
                                         </constraints>
                                         <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="findClient:" destination="uXD-YT-taS" eventType="touchUpInside" id="lVD-Tt-bAv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-Nx-OaZ">
                                         <rect key="frame" x="254" y="62" width="48" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="uXD-YT-taS" eventType="touchUpInside" id="kCf-tz-Fv9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,6 +89,9 @@
                             <constraint firstItem="TnA-hH-WxQ" firstAttribute="centerY" secondItem="Jjl-4X-UI1" secondAttribute="centerY" id="jcR-Xw-kHa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="6yi-Ql-Wef" id="zSp-YL-UaJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYx-q1-oOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,11 +112,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzE-Pv-cV1">
                                 <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.2490368151" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="OcY-bY-s8y" eventType="touchUpInside" id="1iY-iI-g2O"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6v-d0-dMT">
                                 <rect key="frame" x="48" y="70" width="279" height="547"/>
                                 <connections>
-                                    <segue destination="qqx-bQ-tsZ" kind="embed" identifier="showSeasonTourDialog" id="rzg-hE-Tyx"/>
+                                    <segue destination="qqx-bQ-tsZ" kind="embed" identifier="showClientDialog" id="rzg-hE-Tyx"/>
                                 </connections>
                             </containerView>
                         </subviews>

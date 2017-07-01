@@ -43,5 +43,13 @@ class SeasonTourDAO: DAO {
             return nil
         }
     }
+    
+    func findBy(startPlace: String, endPlace: String) -> [SeasonTour] {
+        let list = getAll()! as! [SeasonTour]
+        print(list.count)
+        return list.filter({
+            return $0.tour!.from!.contains(startPlace) && $0.tour!.to!.contains(endPlace)
+        })
+    }
 }
 

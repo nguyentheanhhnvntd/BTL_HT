@@ -138,6 +138,20 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ont-KN-WoW">
+                    <rect key="frame" x="152.5" y="396.5" width="69" height="30"/>
+                    <state key="normal" title="Find more"/>
+                    <connections>
+                        <action selector="findMore:" destination="iN0-l3-epB" eventType="touchUpInside" id="tlW-mc-M7P"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhI-Gn-fvs">
+                    <rect key="frame" x="285.5" y="396" width="45" height="30"/>
+                    <state key="normal" title="Delete"/>
+                    <connections>
+                        <action selector="deleteTicket:" destination="iN0-l3-epB" eventType="touchUpInside" id="wVz-1U-Dxz"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -160,8 +174,11 @@
                 <constraint firstItem="Jp1-ox-LeG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="J1M-ns-gml"/>
                 <constraint firstItem="v5H-Lk-8mJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="JiC-fV-bKI"/>
                 <constraint firstItem="15A-Dc-hIQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="LFj-HT-ffk"/>
+                <constraint firstItem="ZhI-Gn-fvs" firstAttribute="centerY" secondItem="ont-KN-WoW" secondAttribute="centerY" id="LNA-lr-JS7"/>
                 <constraint firstItem="OVe-b3-Uff" firstAttribute="top" secondItem="q6G-aW-bg4" secondAttribute="bottom" constant="8" id="NZv-o1-UcA"/>
+                <constraint firstItem="ont-KN-WoW" firstAttribute="top" secondItem="E62-kH-ygm" secondAttribute="bottom" constant="32" id="NgV-4O-JHV"/>
                 <constraint firstItem="9EH-cV-gvV" firstAttribute="top" secondItem="Jp1-ox-LeG" secondAttribute="bottom" constant="8" id="PLR-xg-MFq"/>
+                <constraint firstItem="ont-KN-WoW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ql2-ID-UwP"/>
                 <constraint firstAttribute="trailing" secondItem="c2D-wk-I0y" secondAttribute="trailing" constant="50" id="RBu-CM-um3"/>
                 <constraint firstItem="q6G-aW-bg4" firstAttribute="top" secondItem="wFu-JD-cfF" secondAttribute="bottom" constant="16" id="SGT-CT-xl0"/>
                 <constraint firstItem="F2m-qa-TVa" firstAttribute="centerY" secondItem="Jp1-ox-LeG" secondAttribute="centerY" id="V3E-OE-uK1"/>
@@ -177,6 +194,7 @@
                 <constraint firstItem="icy-d2-yi0" firstAttribute="top" secondItem="aU4-UW-aHr" secondAttribute="bottom" constant="8" id="jDt-kr-rx4"/>
                 <constraint firstItem="aU4-UW-aHr" firstAttribute="centerY" secondItem="bfS-bo-Rey" secondAttribute="centerY" id="lUf-pt-ip5"/>
                 <constraint firstAttribute="trailing" secondItem="15A-Dc-hIQ" secondAttribute="trailing" constant="16" id="lex-NG-ckm"/>
+                <constraint firstItem="ZhI-Gn-fvs" firstAttribute="leading" secondItem="ont-KN-WoW" secondAttribute="trailing" constant="64" id="mXo-l9-BSB"/>
                 <constraint firstItem="c2D-wk-I0y" firstAttribute="top" secondItem="39n-UN-Qqb" secondAttribute="bottom" constant="16" id="nsl-Jv-c0d"/>
                 <constraint firstItem="E62-kH-ygm" firstAttribute="centerY" secondItem="xNJ-xd-uIP" secondAttribute="centerY" id="paK-RR-ZQT"/>
                 <constraint firstItem="wFu-JD-cfF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="quD-lt-efw"/>

@@ -8,9 +8,15 @@
 
 import UIKit
 
-class ListClientDialog: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol ListClientDialogDelegate {
+    func choose(client: Client)
+}
+
+class ListClientDialog: UIViewController, UITableViewDataSource, UITableViewDelegate, ClientTableViewCellDelegate {
 
     var listClient = [Client]()
+    var delegate: ListClientDialogDelegate!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,12 +24,6 @@ class ListClientDialog: UIViewController, UITableViewDataSource, UITableViewDele
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ClientTableViewCell", bundle: nil), forCellReuseIdentifier: "ClientTableViewCell")
-        
-        let client = NSManagedObjectFactory.createClientNSManagedObject()
-        client.memberCard = MemberCardDAO.init().getAll()![1] as? MemberCard
-        client.name = "Nguyen The Anh"
-        client.address = "81 Lac Long Quan, Cau Giay,.."
-        listClient.append(client)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,7 +35,8 @@ class ListClientDialog: UIViewController, UITableViewDataSource, UITableViewDele
         cell.name.text = "\(client.name!)"
         cell.address.text = "\(client.address!)"
         cell.memberCardType.text = "\(client.memberCard!.cardType!)"
-//        cell.delegate = self
+        cell.delegate = self
+        cell.client = client
         return cell
     }
     
@@ -45,6 +46,10 @@ class ListClientDialog: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
+    }
+    
+    func choose(client: Client) {
+        delegate.choose(client: client)
     }
     
 }
