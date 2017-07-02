@@ -152,7 +152,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    MemberCard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-dY-lAc">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    SeasonTour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-dY-lAc">
                                             <rect key="frame" x="0.0" y="192" width="224" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -283,7 +283,7 @@
                         <outlet property="bill" destination="q8D-NV-N6r" id="YZz-C9-Zki"/>
                         <outlet property="booking" destination="9ZR-XZ-eLe" id="SGx-SW-NtF"/>
                         <outlet property="client" destination="qvV-7J-8hY" id="4UL-zi-mmq"/>
-                        <outlet property="memberCard" destination="QxO-dY-lAc" id="AGJ-MP-adv"/>
+                        <outlet property="seasonTour" destination="QxO-dY-lAc" id="JSv-rQ-dCs"/>
                         <outlet property="setting" destination="bk3-wN-COi" id="F6E-rm-6FN"/>
                         <outlet property="ticket" destination="nCg-9L-H6q" id="UZ6-BH-F0o"/>
                         <outlet property="tour" destination="Qss-NC-bbP" id="e9k-vz-1Ii"/>

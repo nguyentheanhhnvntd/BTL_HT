@@ -51,5 +51,10 @@ class SeasonTourDAO: DAO {
             return $0.tour!.from!.contains(startPlace) && $0.tour!.to!.contains(endPlace)
         })
     }
+    
+    override func update(managedObject: NSManagedObject) -> Bool {
+        print("SeasonTour update")
+        return super.update(managedObject: managedObject)
+    }
 }
 

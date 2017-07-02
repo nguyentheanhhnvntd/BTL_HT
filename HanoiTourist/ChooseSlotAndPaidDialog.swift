@@ -45,10 +45,14 @@ class ChooseSlotAndPaidDialog: UIViewController, UITextFieldDelegate {
         if let adult = Int(adultSlotTextField.text!) {
             money += Double(adult) * ticket.seasonTour!.price
             ticket.adultSlot = Int16.init(exactly: adult)!
+        } else {
+            ticket.adultSlot = 0
         }
         if let children = Int(childrenSlotTextField.text!) {
             money += Double(children) * ticket.seasonTour!.price / 2
             ticket.childrenSlot = Int16.init(exactly: children)!
+        } else {
+            ticket.childrenSlot = 0
         }
         totalPrice.text = "\(money) vnd"
         ticket.price = money

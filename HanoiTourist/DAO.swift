@@ -51,6 +51,7 @@ class DAO: DAOProtocol {
             return true
         } catch {
             print("Error occured during update entity")
+            print(error)
             return false
         }
     }

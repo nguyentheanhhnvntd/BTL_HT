@@ -31,14 +31,14 @@ class ClientInfomationView: UIView {
     }
     
     func setInfo(){
+        
         name.text = client.name
         phone.text = client.phone
         email.text = client.email
         address.text = client.address
-        if let card = client.memberCard {
-            carType.text = card.cardType
-            cardNumber.text = String(describing: card.id)
-        }
+        carType.text = client.cardType
+        cardNumber.text = client.cardID
+        
     }
     
 }

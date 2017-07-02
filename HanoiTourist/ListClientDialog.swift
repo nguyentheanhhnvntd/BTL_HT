@@ -34,7 +34,7 @@ class ListClientDialog: UIViewController, UITableViewDataSource, UITableViewDele
         
         cell.name.text = "\(client.name!)"
         cell.address.text = "\(client.address!)"
-        cell.memberCardType.text = "\(client.memberCard!.cardType!)"
+        cell.memberCardType.text = "Card type: \(client.cardType!)"
         cell.delegate = self
         cell.client = client
         return cell

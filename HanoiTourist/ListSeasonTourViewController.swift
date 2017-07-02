@@ -1,20 +1,18 @@
 //
-//  ListSeasonTourDialog.swift
+//  ListSeasonTourViewController.swift
 //  HanoiTourist
 //
-//  Created by Thế Anh Nguyễn on 6/28/17.
+//  Created by Thế Anh Nguyễn on 7/1/17.
 //  Copyright © 2017 Thế Anh Nguyễn. All rights reserved.
 //
 
 import UIKit
 
-protocol ListSeasonTourDialogDelegate {
-    func selectRow(at: Int)
-    func chooseRow(at: Int)
-}
-
-class ListSeasonTourDialog: UIViewController, UITableViewDelegate, UITableViewDataSource, SeasonTourTableViewCellDelegate {
-    var delegate: ListSeasonTourDialogDelegate!
+class ListSeasonTourViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBAction func showSideMenu(_ sender: UIButton) {
+        SidemenuAction.showSideMenu(currentViewController: self)
+    }
+    
     var listSeasonTour: [SeasonTour]!
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +21,11 @@ class ListSeasonTourDialog: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SeasonTourTableViewCell", bundle: nil), forCellReuseIdentifier: "SeasonTourTableViewCell")
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listSeasonTour = SeasonTourDAO.init().getAll()! as! [SeasonTour]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,20 +49,7 @@ class ListSeasonTourDialog: UIViewController, UITableViewDelegate, UITableViewDa
         cell.slot.text = "\(seasonTour.totalSlot)"
         cell.price.text = "\(seasonTour.price) vnd"
         cell.seasonTour = seasonTour
-        cell.delegate = self
         return cell
-        
     }
     
-    func choose(seasonTour: SeasonTour) {
-        if let atPosition = listSeasonTour.index(of: seasonTour) {
-            print("choose atPosition \(atPosition)")
-            delegate.chooseRow(at: atPosition)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt \(indexPath.row)")
-        delegate.selectRow(at: indexPath.row)
-    }
 }

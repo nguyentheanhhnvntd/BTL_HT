@@ -33,7 +33,7 @@ class InitDefaultDatabase{
     }
     
     static func addClientInfo() {
-        let memberCards = MemberCardDAO.init().getAll()!
+        
         let client = NSManagedObjectFactory.createClientNSManagedObject()
         client.setValue(1, forKey: "id")
         client.setValue("043 795 9900", forKey: "phone")
@@ -41,7 +41,8 @@ class InitDefaultDatabase{
         client.setValue("Ms. Hoàng Thị Tố Nga", forKey: "name")
         client.setValue("nga@dw.com.vn", forKey: "email")
         client.setValue("Customer is GOD!", forKey: "des")
-        client.memberCard = memberCards[0] as? MemberCard
+        client.cardID = "\(Int(client.id) + 100)"
+        client.cardType = "Silver"
         ClientDAO.init().add(managedObject: client)
         
         let client1 = NSManagedObjectFactory.createClientNSManagedObject()
@@ -51,7 +52,8 @@ class InitDefaultDatabase{
         client1.setValue("Mr. Hoàng Thanh Nghi", forKey: "name")
         client1.setValue("nghi@ben.com.vn", forKey: "email")
         client1.setValue("Customer is GOD!", forKey: "des")
-        client1.memberCard = memberCards[1] as? MemberCard
+        client1.cardID = "\(Int(client1.id) + 100)"
+        client1.cardType = "Silver"
         ClientDAO.init().add(managedObject: client1)
         
         let client2 = NSManagedObjectFactory.createClientNSManagedObject()
@@ -61,7 +63,8 @@ class InitDefaultDatabase{
         client2.setValue("Ms. Trần Thị Tuyết", forKey: "name")
         client2.setValue("tuyet@ss.com.vn", forKey: "email")
         client2.setValue("Customer is GOD!", forKey: "des")
-        client2.memberCard = memberCards[2] as? MemberCard
+        client2.cardID = "\(Int(client2.id) + 100)"
+        client2.cardType = "Silver"
         ClientDAO.init().add(managedObject: client2)
         
         let client3 = NSManagedObjectFactory.createClientNSManagedObject()
@@ -71,7 +74,8 @@ class InitDefaultDatabase{
         client3.setValue("Mr. Bùi Hồng Hiển", forKey: "name")
         client3.setValue("hien@tc.com.vn", forKey: "email")
         client3.setValue("Customer is GOD!", forKey: "des")
-        client3.memberCard = memberCards[3] as? MemberCard
+        client3.cardID = "\(Int(client3.id) + 100)"
+        client3.cardType = "Silver"
         ClientDAO.init().add(managedObject: client3)
     }
     
@@ -195,33 +199,6 @@ class InitDefaultDatabase{
         employee9.setValue("hanoi", forKey: "password")
         employee9.setValue("Never give up!", forKey: "des")
         EmployeeDAO.init().add(managedObject: employee9)
-    }
-    
-    static func addMemberCardInfo() {
-        let mbDAO = MemberCardDAO.init()
-        let memberCard = NSManagedObjectFactory.createMemberCardNSManagedObject()
-        memberCard.setValue(1, forKey: "id")
-        memberCard.setValue("Bronze Member", forKey: "cardType")
-        memberCard.setValue("New registration.", forKey: "des")
-        mbDAO.add(managedObject: memberCard)
-        
-        let memberCard1 = NSManagedObjectFactory.createMemberCardNSManagedObject()
-        memberCard1.setValue(2, forKey: "id")
-        memberCard1.setValue("Silver Member", forKey: "cardType")
-        memberCard1.setValue("1 year to 3 year.", forKey: "des")
-        mbDAO.add(managedObject: memberCard1)
-        
-        let memberCard2 = NSManagedObjectFactory.createMemberCardNSManagedObject()
-        memberCard2.setValue(3, forKey: "id")
-        memberCard2.setValue("Gold Member", forKey: "cardType")
-        memberCard2.setValue("3 year to 10 year.", forKey: "des")
-        mbDAO.add(managedObject: memberCard2)
-        
-        let memberCard3 = NSManagedObjectFactory.createMemberCardNSManagedObject()
-        memberCard3.setValue(4, forKey: "id")
-        memberCard3.setValue("Platinum Member", forKey: "cardType")
-        memberCard3.setValue("10 year and above.", forKey: "des")
-        mbDAO.add(managedObject: memberCard3)
     }
     
     static func addTourInfo() {

@@ -30,7 +30,7 @@ class ClientDAO: DAO {
                 print(data.value(forKey: id) as? Int ?? "nil id")
                 
                 print(data.value(forKey: email) as? String ?? "nil")
-                print((data as! Client).memberCard!.cardType!)
+                print((data as! Client).cardType!)
                 print((data.value(forKey: self.name) as! String).decodeToVietnamese())
                 print((data.value(forKey: self.address) as! String).decodeToVietnamese())
             }

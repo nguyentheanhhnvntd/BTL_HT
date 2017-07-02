@@ -1,5 +1,5 @@
 //
-//  TicketTableViewCell.swift
+//  BillTableViewCell.swift
 //  HanoiTourist
 //
 //  Created by Thế Anh Nguyễn on 7/1/17.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class TicketTableViewCell: UITableViewCell {
-
+class BillTableViewCell: UITableViewCell {
+    @IBOutlet weak var billDate: UILabel!
+    @IBOutlet weak var slot: UILabel!
     @IBOutlet weak var client: UILabel!
-    @IBOutlet weak var adultChildren: UILabel!
-    @IBOutlet weak var bookingDate: UILabel!
-    @IBOutlet weak var place: UILabel!
+    @IBOutlet weak var employee: UILabel!
+    @IBOutlet weak var payType: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 }

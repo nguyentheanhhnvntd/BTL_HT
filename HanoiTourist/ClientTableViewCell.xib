@@ -16,34 +16,34 @@
             <rect key="frame" x="0.0" y="0.0" width="333" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wo6-2B-FCP" id="1Nh-Hz-L5g">
-                <rect key="frame" x="0.0" y="0.0" width="333" height="84.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="333" height="85"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNT-b2-AzR">
-                        <rect key="frame" x="8" y="8" width="40.5" height="18"/>
+                        <rect key="frame" x="16" y="8" width="40.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmt-NX-pTX">
-                        <rect key="frame" x="8" y="34" width="53" height="17"/>
+                        <rect key="frame" x="16" y="34" width="53" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmY-I0-SXk">
-                        <rect key="frame" x="8" y="59" width="88.5" height="17"/>
+                        <rect key="frame" x="16" y="59" width="88.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="Xmt-NX-pTX" secondAttribute="leading" id="AyU-3l-nXX"/>
+                    <constraint firstItem="Xmt-NX-pTX" firstAttribute="leading" secondItem="1Nh-Hz-L5g" secondAttribute="leading" constant="16" id="AyU-3l-nXX"/>
                     <constraint firstItem="qmY-I0-SXk" firstAttribute="top" secondItem="Xmt-NX-pTX" secondAttribute="bottom" constant="8" id="Qcr-xW-vcp"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="qmY-I0-SXk" secondAttribute="leading" id="gNG-ay-epF"/>
+                    <constraint firstItem="qmY-I0-SXk" firstAttribute="leading" secondItem="1Nh-Hz-L5g" secondAttribute="leading" constant="16" id="gNG-ay-epF"/>
                     <constraint firstItem="Xmt-NX-pTX" firstAttribute="top" secondItem="HNT-b2-AzR" secondAttribute="bottom" constant="8" id="qK7-By-o19"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="HNT-b2-AzR" secondAttribute="leading" id="tTe-KX-N2b"/>
+                    <constraint firstItem="HNT-b2-AzR" firstAttribute="leading" secondItem="1Nh-Hz-L5g" secondAttribute="leading" constant="16" id="tTe-KX-N2b"/>
                     <constraint firstAttribute="topMargin" secondItem="HNT-b2-AzR" secondAttribute="top" id="was-x7-ORB"/>
                 </constraints>
             </tableViewCellContentView>

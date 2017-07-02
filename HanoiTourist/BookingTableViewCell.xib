@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingTableViewCell" rowHeight="96" id="KGk-i7-Jjw" customClass="BookingTableViewCell" customModule="HanoiTourist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjX-9u-LL3">
+                        <rect key="frame" x="16" y="8" width="36" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lp-mY-MH1">
+                        <rect key="frame" x="16" y="37" width="30" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9H-33-hN2">
+                        <rect key="frame" x="16" y="66" width="44.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YM8-vf-Xqo">
+                        <rect key="frame" x="263" y="8" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NjX-9u-LL3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1zw-MU-pGz"/>
+                    <constraint firstAttribute="bottom" secondItem="x9H-33-hN2" secondAttribute="bottom" constant="8" id="4gl-44-ZLk"/>
+                    <constraint firstItem="5Lp-mY-MH1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="CBM-uY-Kt8"/>
+                    <constraint firstItem="x9H-33-hN2" firstAttribute="top" secondItem="5Lp-mY-MH1" secondAttribute="bottom" constant="8" id="OPV-s2-SZc"/>
+                    <constraint firstItem="x9H-33-hN2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="S44-k3-vvm"/>
+                    <constraint firstAttribute="trailing" secondItem="YM8-vf-Xqo" secondAttribute="trailing" constant="8" id="TPx-Xb-eE1"/>
+                    <constraint firstItem="YM8-vf-Xqo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="WMM-Gi-ljN"/>
+                    <constraint firstItem="NjX-9u-LL3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="qPM-MI-Opt"/>
+                    <constraint firstItem="5Lp-mY-MH1" firstAttribute="top" secondItem="NjX-9u-LL3" secondAttribute="bottom" constant="8" id="xBb-7l-GRi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bookingDate" destination="NjX-9u-LL3" id="n82-Mu-eAg"/>
+                <outlet property="client" destination="x9H-33-hN2" id="ghF-gC-zPF"/>
+                <outlet property="paidState" destination="YM8-vf-Xqo" id="ecv-8w-ZLr"/>
+                <outlet property="slot" destination="5Lp-mY-MH1" id="P8v-db-IkC"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="151"/>
+        </tableViewCell>
+    </objects>
+</document>

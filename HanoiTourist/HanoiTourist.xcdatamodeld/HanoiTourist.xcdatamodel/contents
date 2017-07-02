@@ -18,9 +18,10 @@
         <relationship name="tickets" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="booking" inverseEntity="Ticket" syncable="YES"/>
     </entity>
     <entity name="Client" representedClassName="Client" parentEntity="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="cardID" attributeType="String" syncable="YES"/>
+        <attribute name="cardType" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="bookings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Booking" inverseName="client" inverseEntity="Booking" syncable="YES"/>
-        <relationship name="memberCard" maxCount="1" deletionRule="Nullify" destinationEntity="MemberCard" inverseName="clients" inverseEntity="MemberCard" syncable="YES"/>
     </entity>
     <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String" syncable="YES"/>
@@ -39,18 +40,12 @@
         <attribute name="username" attributeType="String" syncable="YES"/>
         <relationship name="bills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bill" inverseName="employee" inverseEntity="Bill" syncable="YES"/>
     </entity>
-    <entity name="MemberCard" representedClassName="MemberCard" syncable="YES" codeGenerationType="class">
-        <attribute name="cardType" attributeType="String" syncable="YES"/>
-        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="clients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Client" inverseName="memberCard" inverseEntity="Client" syncable="YES"/>
-    </entity>
     <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES" codeGenerationType="class">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" optional="YES" attributeType="String" regularExpressionString="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}+.[A-Za-z]{2,}" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" regularExpressionString="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}+.[A-Za-z]{2,}" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="phone" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="SeasonTour" representedClassName="SeasonTour" syncable="YES" codeGenerationType="class">
         <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
@@ -60,10 +55,10 @@
         <attribute name="start" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="totalSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="ticket" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="seasonTour" inverseEntity="Ticket" syncable="YES"/>
-        <relationship name="tour" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="seasonTour" inverseEntity="Tour" syncable="YES"/>
+        <relationship name="tour" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="seasonTour" inverseEntity="Tour" syncable="YES"/>
     </entity>
     <entity name="Ticket" representedClassName="Ticket" syncable="YES" codeGenerationType="class">
-        <attribute name="adultSlot" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="adultSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="childrenSlot" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -81,14 +76,13 @@
     </entity>
     <elements>
         <element name="Bill" positionX="-333" positionY="-189" width="128" height="135"/>
-        <element name="Booking" positionX="-360" positionY="-18" width="128" height="148"/>
-        <element name="Client" positionX="-47" positionY="-207" width="128" height="90"/>
+        <element name="Booking" positionX="-353" positionY="-13" width="128" height="148"/>
+        <element name="Client" positionX="-47" positionY="-207" width="128" height="103"/>
         <element name="Company" positionX="-587" positionY="-360" width="128" height="163"/>
         <element name="Employee" positionX="-324" positionY="-360" width="128" height="120"/>
-        <element name="MemberCard" positionX="-45" positionY="-54" width="128" height="105"/>
-        <element name="Person" positionX="-45" positionY="-360" width="128" height="120"/>
+        <element name="Person" positionX="-45" positionY="-360" width="128" height="118"/>
         <element name="SeasonTour" positionX="-837" positionY="-117" width="128" height="163"/>
-        <element name="Ticket" positionX="-585" positionY="-145" width="128" height="135"/>
+        <element name="Ticket" positionX="-585" positionY="-145" width="128" height="133"/>
         <element name="Tour" positionX="-801" positionY="-342" width="128" height="148"/>
     </elements>
 </model>

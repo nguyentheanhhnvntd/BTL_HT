@@ -8,35 +8,49 @@
 
 import UIKit
 
-class ListClientViewController: UIViewController {
+class ListClientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var listClient: [Client]!
     @IBOutlet weak var tableView: UITableView!
 
     @IBAction func search(_ sender: UIButton) {
     }
     @IBOutlet weak var titleTextField: UITextField!
+    
     @IBAction func showSideMenu(_ sender: UIButton) {
         SidemenuAction.showSideMenu(currentViewController: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "ClientTableViewCell", bundle: nil), forCellReuseIdentifier: "ClientTableViewCell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listClient = ClientDAO.init().getAll()! as! [Client]
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClientTableViewCell") as! ClientTableViewCell
+        
+        let client = listClient[indexPath.row]
+        
+        cell.name.text = "\(client.name!)"
+        cell.address.text = "\(client.address!)"
+        cell.memberCardType.text = "Card type: \(client.cardType!)"
+//        cell.delegate = self
+        cell.client = client
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listClient.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
 }

@@ -39,5 +39,10 @@ class BillDAO: DAO {
             return nil
         }
     }
+    
+    override func add(managedObject: NSManagedObject) -> Bool {
+        print("add Bill")
+        return super.add(managedObject: managedObject)
+    }
 }
 

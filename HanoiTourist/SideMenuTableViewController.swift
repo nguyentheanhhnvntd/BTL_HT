@@ -24,7 +24,7 @@ class SideMenuTableViewController: UITableViewController {
     @IBOutlet weak var user: UILabel!
     @IBOutlet weak var tour: UILabel!
     @IBOutlet weak var ticket: UILabel!
-    @IBOutlet weak var memberCard: UILabel!
+    @IBOutlet weak var seasonTour: UILabel!
     @IBOutlet weak var setting: UILabel!
     @IBAction func logout(_ sender: UIButton) {
     }
@@ -39,11 +39,11 @@ class SideMenuTableViewController: UITableViewController {
         userInfo.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showUserInfo)))
         booking.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showBooking)))
         bill.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showBill)))
-        client.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showClent)))
+        client.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showClient)))
         user.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showUser)))
         tour.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showTour)))
         ticket.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showTicket)))
-        memberCard.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showMemberCard)))
+        seasonTour.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showSeasonTour)))
         setting.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(showSetting)))
     }
     
@@ -60,23 +60,23 @@ class SideMenuTableViewController: UITableViewController {
         SidemenuAction.showBooking(currentViewController: self.currentVC)
     }
     func showBill(){
-        
+        SidemenuAction.showBill(currentViewController: self.currentVC)
     }
-    func showClent(){
+    func showClient(){
         SidemenuAction.showClient(currentViewController: self.currentVC)
         
     }
     func showUser(){
-        
+//        SidemenuAction.showEmployee(currentViewController: currentVC)
     }
     func showTour(){
-        
+//        SidemenuAction.showTour(currentViewController: currentVC)
     }
     func showTicket(){
-        
+        SidemenuAction.showTicket(currentViewController: currentVC)
     }
-    func showMemberCard(){
-        
+    func showSeasonTour(){
+        SidemenuAction.showSeasonTour(currentViewController: currentVC)
     }
     func showSetting(){
         

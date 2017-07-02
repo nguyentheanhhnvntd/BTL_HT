@@ -58,11 +58,6 @@ class NSManagedObjectFactory {
         return booking
     }
     
-    static func createMemberCardNSManagedObject() -> MemberCard {
-        entityDescription = NSEntityDescription.entity(forEntityName: "MemberCard", in: appDelegateManagerObjectContext)
-        return NSManagedObject(entity: entityDescription!, insertInto: appDelegateManagerObjectContext) as! MemberCard
-    }
-    
     static func createEmployeeNSManagedObject() -> Employee {
         entityDescription = NSEntityDescription.entity(forEntityName: "Employee", in: appDelegateManagerObjectContext)
         return NSManagedObject(entity: entityDescription!, insertInto: appDelegateManagerObjectContext) as! Employee
@@ -83,5 +78,16 @@ class NSManagedObjectFactory {
     static func createSeasonTourNSManagedObject() -> SeasonTour {
         entityDescription = NSEntityDescription.entity(forEntityName: "SeasonTour", in: appDelegateManagerObjectContext)
         return NSManagedObject(entity: entityDescription!, insertInto: appDelegateManagerObjectContext) as! SeasonTour
+    }
+    
+    static func createClientNSManagedObject(name: String, phone: String, email: String, address: String, cardNumber: String, cardType: String) -> Client {
+        let client = createClientNSManagedObject()
+        client.name = name
+        client.phone = phone
+        client.email = email
+        client.address = address
+        client.cardID  = cardNumber
+        client.cardType = cardType
+        return client
     }
 }

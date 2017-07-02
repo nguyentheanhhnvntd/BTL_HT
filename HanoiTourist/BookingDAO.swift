@@ -21,14 +21,13 @@ class BookingDAO: DAO {
     let bookingDate = "bookingDate"
     
     override func getAll() -> [NSManagedObject]? {
-        print("getAllCompanyData")
+        print("getAllBookingData")
         do {
             let dataArray = try appDelegateManagerObjectContext.fetch(fetchRequest) as! [NSManagedObject]
             for data in dataArray {
                 print(data.value(forKey: id) as? Int ?? "nil id")
-                print(data.value(forKey: totalSlot) as? String ?? "nil")
-                print(data.value(forKey: price) as? String ?? "nil")
-                print(data.value(forKey: bookingDate) as? String ?? "nil")
+                print(data.value(forKey: totalSlot) as? Int16 ?? "nil")
+                print(data.value(forKey: bookingDate) as? NSDate ?? "nil")
                 print((data as! Booking).client!.name!)
             }
             return dataArray
@@ -37,6 +36,11 @@ class BookingDAO: DAO {
             print(fetchError)
             return nil
         }
+    }
+    
+    override func add(managedObject: NSManagedObject) -> Bool {
+        print("Add Booking")
+        return super.add(managedObject: managedObject)
     }
 }
 

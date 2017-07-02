@@ -29,10 +29,40 @@ class SidemenuAction {
         currentViewController.present(clientVC, animated: true, completion: nil)
     }
     
+    static func showTicket(currentViewController: UIViewController){
+        let ticketVC = UIStoryboard.init(name: "Ticket", bundle: nil).instantiateInitialViewController()!
+        currentViewController.dismiss(animated: false, completion: nil)
+        currentViewController.present(ticketVC, animated: true, completion: nil)
+    }
+    
+    static func showSeasonTour(currentViewController: UIViewController){
+        let seasonTourVC = UIStoryboard.init(name: "SeasonTour", bundle: nil).instantiateInitialViewController()!
+        currentViewController.dismiss(animated: false, completion: nil)
+        currentViewController.present(seasonTourVC, animated: true, completion: nil)
+    }
+    
+    static func showBill(currentViewController: UIViewController){
+        let billVC = UIStoryboard.init(name: "Bill", bundle: nil).instantiateInitialViewController()!
+        currentViewController.dismiss(animated: false, completion: nil)
+        currentViewController.present(billVC, animated: true, completion: nil)
+    }
+    
     static func showCompanyInfo(currentViewController: UIViewController){
         let companyInfoVC = UIStoryboard.init(name: "Company", bundle: nil).instantiateInitialViewController()!
         currentViewController.dismiss(animated: false, completion: nil)
         currentViewController.present(companyInfoVC, animated: true, completion: nil)
+    }
+    
+    static func showEmployee(currentViewController: UIViewController){
+        let employeeVC = UIStoryboard.init(name: "Employee", bundle: nil).instantiateInitialViewController()!
+        currentViewController.dismiss(animated: false, completion: nil)
+        currentViewController.present(employeeVC, animated: true, completion: nil)
+    }
+    
+    static func showTour(currentViewController: UIViewController){
+        let tourVC = UIStoryboard.init(name: "Tour", bundle: nil).instantiateInitialViewController()!
+        currentViewController.dismiss(animated: false, completion: nil)
+        currentViewController.present(tourVC, animated: true, completion: nil)
     }
     
 }

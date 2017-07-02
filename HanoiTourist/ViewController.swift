@@ -19,28 +19,47 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
+        createDefaultInfo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+//        showInfo()
         showBooking()
     }
     
     func showInfo(){
-//        TourDAO.init().getAll()
 //        CompanyDAO.init().getAll()
-//        EmployeeDAO.init().getAll()
-//        ClientDAO.init().getAll()
-//        MemberCardDAO.init().getAll()
+//        TourDAO.init().getAll()
 //        SeasonTourDAO.init().getAll()
-    }
-    
-    func showClient() {
-        SidemenuAction.showClient(currentViewController: self)
+//        ClientDAO.init().getAll()
+//        EmployeeDAO.init().getAll()
     }
     
     func showBooking() {
         SidemenuAction.showBooking(currentViewController: self)
     }
+    
+    func createDefaultInfo() {
+        InitDefaultDatabase.addCompanyInfo()
+        InitDefaultDatabase.addTourInfo()
+        InitDefaultDatabase.addSeasonTour()
+        InitDefaultDatabase.addClientInfo()
+        InitDefaultDatabase.addEmployeeInfo()
+    }
+    
+//    func setInfo() {
+//        let clientDAO = ClientDAO.init()
+//        let list = clientDAO.getAll()! as! [Client]
+//        var id = 101
+//        for client in list {
+//            client.cardID = "\(id)"
+//            id += 1
+//            client.cardType = "Silver"
+//            clientDAO.update(managedObject: client)
+//        }
+//        print("\n\n\n")
+//        clientDAO.getAll()
+//    }
 }
 

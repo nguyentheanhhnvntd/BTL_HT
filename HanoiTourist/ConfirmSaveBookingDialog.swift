@@ -18,9 +18,8 @@ class ConfirmSaveBookingDialog: UIViewController, ChoosePayTypeDialogDelegate {
     @IBAction func dismiss(_ sender: Any) {
         dismiss(animated: false, completion: nil)
     }
-
+    
     @IBAction func payRightNow(_ sender: UIButton) {
-        dismiss(animated: false, completion: nil)
         showChoosePayTypeDialog()
     }
     @IBAction func payLater(_ sender: UIButton) {
@@ -49,10 +48,15 @@ class ConfirmSaveBookingDialog: UIViewController, ChoosePayTypeDialogDelegate {
     }
     
     func payByBanking() {
-        delegate.payRightNow(payType: "Banking")
+        dismiss(animated: false, completion: {
+            self.delegate.payRightNow(payType: "Banking")
+        })
+        
     }
     
     func payByCash() {
-        delegate.payRightNow(payType: "Cash")
+        dismiss(animated: false, completion: {
+            self.delegate.payRightNow(payType: "Cash")
+        })
     }
 }

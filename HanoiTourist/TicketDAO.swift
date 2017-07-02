@@ -16,22 +16,23 @@ class TicketDAO: DAO {
     }
     
     let id = "id"
-    let quantity = "quantity"
+    let adultSlot = "adultSlot"
     let price = "price"
-    let startDate = "startDate"
-    let endDate = "endDate"
+    let childrenSlot = "childrenSlot"
     
     override func getAll() -> [NSManagedObject]? {
         print("getAllCompanyData")
         do {
-            let dataArray = try appDelegateManagerObjectContext.fetch(fetchRequest) as! [NSManagedObject]
+            var dataArray = try appDelegateManagerObjectContext.fetch(fetchRequest) as! [Ticket]
             for data in dataArray {
                 print(data.value(forKey: id) as? Int ?? "nil id")
-                print(data.value(forKey: quantity) as? String ?? "nil")
-                print(data.value(forKey: price) as? String ?? "nil")
-                print(data.value(forKey: startDate) as? Date ?? "nil")
-                print(data.value(forKey: endDate) as? Date ?? "nil")
+                print(data.value(forKey: adultSlot) as? Int ?? "nil")
+                print(data.value(forKey: price) as? Double ?? "nil")
+                print(data.value(forKey: childrenSlot) as? Int ?? "nil")
             }
+            dataArray = dataArray.filter({
+                $0.price > 0 && $0.booking != nil
+            })
             return dataArray
         } catch {
             let fetchError = error as NSError
@@ -39,4 +40,11 @@ class TicketDAO: DAO {
             return nil
         }
     }
+    
+//    override func add(managedObject: NSManagedObject) -> Bool {
+//        print("Add Ticket")
+//        let ticket = managedObject as! Ticket
+//        print(ticket.booking!.bookingDate)
+//        return super.add(managedObject: managedObject)
+//    }
 }

@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84055B811F08D73400DE051A /* AddClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84055B801F08D73300DE051A /* AddClientViewController.swift */; };
+		84055B831F08E85E00DE051A /* EditBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84055B821F08E85E00DE051A /* EditBookingViewController.swift */; };
 		840F1BFF1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F1BFE1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift */; };
 		840F1C011F040EA700D144F9 /* ChooseSlotAndPaidDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F1C001F040EA700D144F9 /* ChooseSlotAndPaidDialog.swift */; };
-		841301FC1F035294008D669C /* FindTicketDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841301FA1F035294008D669C /* FindTicketDialogViewController.swift */; };
 		841302011F03533B008D669C /* FindSeasonTourDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841302001F03533B008D669C /* FindSeasonTourDialog.storyboard */; };
-		841302051F03583B008D669C /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841302031F03583B008D669C /* TicketTableViewCell.swift */; };
-		841302061F03583B008D669C /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841302041F03583B008D669C /* TicketTableViewCell.xib */; };
+		841302051F03583B008D669C /* SeasonTourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841302031F03583B008D669C /* SeasonTourTableViewCell.swift */; };
+		841302061F03583B008D669C /* SeasonTourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841302041F03583B008D669C /* SeasonTourTableViewCell.xib */; };
 		841302091F03679E008D669C /* ListSeasonTourDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841302081F03679E008D669C /* ListSeasonTourDialog.swift */; };
 		8413020B1F03680F008D669C /* ListSeasonTourContainerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413020A1F03680F008D669C /* ListSeasonTourContainerDialog.swift */; };
 		8413020D1F036E88008D669C /* DetailSeasonTourDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413020C1F036E88008D669C /* DetailSeasonTourDialog.swift */; };
@@ -20,12 +21,23 @@
 		84153D711EFD27E30048D411 /* Client.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84153D701EFD27E30048D411 /* Client.storyboard */; };
 		84153D751EFD441F0048D411 /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D741EFD441F0048D411 /* SideMenuContainerViewController.swift */; };
 		84153D771EFD46230048D411 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D761EFD46230048D411 /* SideMenuTableViewController.swift */; };
+		841FC8501F07C5B90064F3B3 /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC84E1F07C5B90064F3B3 /* BookingTableViewCell.swift */; };
+		841FC8511F07C5B90064F3B3 /* BookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841FC84F1F07C5B90064F3B3 /* BookingTableViewCell.xib */; };
+		841FC8541F07C7B00064F3B3 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC8521F07C7B00064F3B3 /* BillTableViewCell.swift */; };
+		841FC8551F07C7B00064F3B3 /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841FC8531F07C7B00064F3B3 /* BillTableViewCell.xib */; };
+		841FC85C1F07CB810064F3B3 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC85A1F07CB810064F3B3 /* TicketTableViewCell.swift */; };
+		841FC85D1F07CB810064F3B3 /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841FC85B1F07CB810064F3B3 /* TicketTableViewCell.xib */; };
+		841FC85F1F07D03C0064F3B3 /* SeasonTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841FC85E1F07D03C0064F3B3 /* SeasonTour.storyboard */; };
+		841FC8641F07D0FB0064F3B3 /* ListSeasonTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC8631F07D0FB0064F3B3 /* ListSeasonTourViewController.swift */; };
+		841FC8671F07DF0C0064F3B3 /* ListTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC8661F07DF0C0064F3B3 /* ListTicketViewController.swift */; };
+		841FC8691F07E3110064F3B3 /* Ticket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841FC8681F07E3110064F3B3 /* Ticket.storyboard */; };
+		841FC86D1F07EDFD0064F3B3 /* ListBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC86C1F07EDFD0064F3B3 /* ListBillViewController.swift */; };
+		841FC86F1F07EE170064F3B3 /* Bill.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841FC86E1F07EE170064F3B3 /* Bill.storyboard */; };
 		8422000F1EFF71F100170315 /* NSManagedObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422000E1EFF71F100170315 /* NSManagedObjectFactory.swift */; };
 		84320F521EFCB2BE002B127C /* CompanyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F511EFCB2BE002B127C /* CompanyDAO.swift */; };
 		84320F541EFCBF85002B127C /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F531EFCBF85002B127C /* DAO.swift */; };
 		84320F561EFCC409002B127C /* DAOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F551EFCC409002B127C /* DAOProtocol.swift */; };
 		84320F581EFCC94B002B127C /* TourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F571EFCC94B002B127C /* TourDAO.swift */; };
-		84320F5A1EFCC956002B127C /* MemberCardDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F591EFCC956002B127C /* MemberCardDAO.swift */; };
 		84320F5C1EFCCBD1002B127C /* BillDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F5B1EFCCBD1002B127C /* BillDAO.swift */; };
 		84320F5E1EFCCD7D002B127C /* BookingDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F5D1EFCCD7D002B127C /* BookingDAO.swift */; };
 		84320F601EFCD969002B127C /* ClientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320F5F1EFCD969002B127C /* ClientDAO.swift */; };
@@ -61,7 +73,6 @@
 		84EB432E1EF8E98900A294B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EB432C1EF8E98900A294B3 /* LaunchScreen.storyboard */; };
 		84EB43391EF8E98900A294B3 /* HanoiTouristTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43381EF8E98900A294B3 /* HanoiTouristTests.swift */; };
 		84EB43441EF8E98900A294B3 /* HanoiTouristUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43431EF8E98900A294B3 /* HanoiTouristUITests.swift */; };
-		84F7B2E11EFA5D4600C6C9C7 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7B2E01EFA5D4600C6C9C7 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +93,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84055B801F08D73300DE051A /* AddClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClientViewController.swift; sourceTree = "<group>"; };
+		84055B821F08E85E00DE051A /* EditBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookingViewController.swift; sourceTree = "<group>"; };
 		840F1BFE1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindSeasonTourByPlaceDialog.swift; sourceTree = "<group>"; };
 		840F1C001F040EA700D144F9 /* ChooseSlotAndPaidDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSlotAndPaidDialog.swift; sourceTree = "<group>"; };
-		841301FA1F035294008D669C /* FindTicketDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindTicketDialogViewController.swift; sourceTree = "<group>"; };
 		841302001F03533B008D669C /* FindSeasonTourDialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FindSeasonTourDialog.storyboard; sourceTree = "<group>"; };
-		841302031F03583B008D669C /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
-		841302041F03583B008D669C /* TicketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		841302031F03583B008D669C /* SeasonTourTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTourTableViewCell.swift; sourceTree = "<group>"; };
+		841302041F03583B008D669C /* SeasonTourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeasonTourTableViewCell.xib; sourceTree = "<group>"; };
 		841302081F03679E008D669C /* ListSeasonTourDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSeasonTourDialog.swift; sourceTree = "<group>"; };
 		8413020A1F03680F008D669C /* ListSeasonTourContainerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSeasonTourContainerDialog.swift; sourceTree = "<group>"; };
 		8413020C1F036E88008D669C /* DetailSeasonTourDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSeasonTourDialog.swift; sourceTree = "<group>"; };
@@ -95,12 +107,23 @@
 		84153D701EFD27E30048D411 /* Client.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Client.storyboard; sourceTree = "<group>"; };
 		84153D741EFD441F0048D411 /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
 		84153D761EFD46230048D411 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		841FC84E1F07C5B90064F3B3 /* BookingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
+		841FC84F1F07C5B90064F3B3 /* BookingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingTableViewCell.xib; sourceTree = "<group>"; };
+		841FC8521F07C7B00064F3B3 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		841FC8531F07C7B00064F3B3 /* BillTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillTableViewCell.xib; sourceTree = "<group>"; };
+		841FC85A1F07CB810064F3B3 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		841FC85B1F07CB810064F3B3 /* TicketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		841FC85E1F07D03C0064F3B3 /* SeasonTour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeasonTour.storyboard; sourceTree = "<group>"; };
+		841FC8631F07D0FB0064F3B3 /* ListSeasonTourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSeasonTourViewController.swift; sourceTree = "<group>"; };
+		841FC8661F07DF0C0064F3B3 /* ListTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTicketViewController.swift; sourceTree = "<group>"; };
+		841FC8681F07E3110064F3B3 /* Ticket.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ticket.storyboard; sourceTree = "<group>"; };
+		841FC86C1F07EDFD0064F3B3 /* ListBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBillViewController.swift; sourceTree = "<group>"; };
+		841FC86E1F07EE170064F3B3 /* Bill.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bill.storyboard; sourceTree = "<group>"; };
 		8422000E1EFF71F100170315 /* NSManagedObjectFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectFactory.swift; sourceTree = "<group>"; };
 		84320F511EFCB2BE002B127C /* CompanyDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDAO.swift; sourceTree = "<group>"; };
 		84320F531EFCBF85002B127C /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		84320F551EFCC409002B127C /* DAOProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProtocol.swift; sourceTree = "<group>"; };
 		84320F571EFCC94B002B127C /* TourDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourDAO.swift; sourceTree = "<group>"; };
-		84320F591EFCC956002B127C /* MemberCardDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCardDAO.swift; sourceTree = "<group>"; };
 		84320F5B1EFCCBD1002B127C /* BillDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillDAO.swift; sourceTree = "<group>"; };
 		84320F5D1EFCCD7D002B127C /* BookingDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDAO.swift; sourceTree = "<group>"; };
 		84320F5F1EFCD969002B127C /* ClientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDAO.swift; sourceTree = "<group>"; };
@@ -142,7 +165,6 @@
 		84EB433F1EF8E98900A294B3 /* HanoiTouristUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiTouristUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB43431EF8E98900A294B3 /* HanoiTouristUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiTouristUITests.swift; sourceTree = "<group>"; };
 		84EB43451EF8E98900A294B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84F7B2E01EFA5D4600C6C9C7 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,12 +197,18 @@
 			children = (
 				84620BD31F02A8A1009CED07 /* TicketInfomationView.xib */,
 				84620BD51F02AFFC009CED07 /* TicketInfomationView.swift */,
-				841302031F03583B008D669C /* TicketTableViewCell.swift */,
-				841302041F03583B008D669C /* TicketTableViewCell.xib */,
+				841302031F03583B008D669C /* SeasonTourTableViewCell.swift */,
+				841302041F03583B008D669C /* SeasonTourTableViewCell.xib */,
 				84B456B81F04A819004A23FF /* ClientInfomationView.xib */,
 				84B456BA1F04A838004A23FF /* ClientInfomationView.swift */,
 				84B456C21F04AF29004A23FF /* ClientTableViewCell.swift */,
 				84B456C31F04AF29004A23FF /* ClientTableViewCell.xib */,
+				841FC84E1F07C5B90064F3B3 /* BookingTableViewCell.swift */,
+				841FC84F1F07C5B90064F3B3 /* BookingTableViewCell.xib */,
+				841FC8521F07C7B00064F3B3 /* BillTableViewCell.swift */,
+				841FC8531F07C7B00064F3B3 /* BillTableViewCell.xib */,
+				841FC85A1F07CB810064F3B3 /* TicketTableViewCell.swift */,
+				841FC85B1F07CB810064F3B3 /* TicketTableViewCell.xib */,
 			);
 			name = CustomObject;
 			sourceTree = "<group>";
@@ -213,6 +241,9 @@
 				8432D7471F025A9B00C59604 /* Booking.storyboard */,
 				841302001F03533B008D669C /* FindSeasonTourDialog.storyboard */,
 				84B456BC1F04AB14004A23FF /* FindClientByNameDialog.storyboard */,
+				841FC85E1F07D03C0064F3B3 /* SeasonTour.storyboard */,
+				841FC8681F07E3110064F3B3 /* Ticket.storyboard */,
+				841FC86E1F07EE170064F3B3 /* Bill.storyboard */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -220,12 +251,37 @@
 		84153D6F1EFD20EF0048D411 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				84EB43221EF8E98900A294B3 /* ViewController.swift */,
 				84EB432A1EF8E98900A294B3 /* Assets.xcassets */,
 				84EB432F1EF8E98900A294B3 /* Info.plist */,
 				84EB43271EF8E98900A294B3 /* HanoiTourist.xcdatamodeld */,
 				84EB43201EF8E98900A294B3 /* AppDelegate.swift */,
 			);
 			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		841FC8601F07D0B20064F3B3 /* SeasonTourController */ = {
+			isa = PBXGroup;
+			children = (
+				841FC8631F07D0FB0064F3B3 /* ListSeasonTourViewController.swift */,
+			);
+			name = SeasonTourController;
+			sourceTree = "<group>";
+		};
+		841FC8651F07DEF60064F3B3 /* TicketController */ = {
+			isa = PBXGroup;
+			children = (
+				841FC8661F07DF0C0064F3B3 /* ListTicketViewController.swift */,
+			);
+			name = TicketController;
+			sourceTree = "<group>";
+		};
+		841FC86B1F07EDEB0064F3B3 /* BillController */ = {
+			isa = PBXGroup;
+			children = (
+				841FC86C1F07EDFD0064F3B3 /* ListBillViewController.swift */,
+			);
+			name = BillController;
 			sourceTree = "<group>";
 		};
 		84320F501EFCB28F002B127C /* DAO */ = {
@@ -235,7 +291,6 @@
 				84320F531EFCBF85002B127C /* DAO.swift */,
 				84320F511EFCB2BE002B127C /* CompanyDAO.swift */,
 				84320F571EFCC94B002B127C /* TourDAO.swift */,
-				84320F591EFCC956002B127C /* MemberCardDAO.swift */,
 				84320F5B1EFCCBD1002B127C /* BillDAO.swift */,
 				84320F5D1EFCCD7D002B127C /* BookingDAO.swift */,
 				84320F5F1EFCD969002B127C /* ClientDAO.swift */,
@@ -260,8 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				8432D7491F025DE400C59604 /* ListBookingViewController.swift */,
-				841301FA1F035294008D669C /* FindTicketDialogViewController.swift */,
 				84A1D5E71F03D26F00527BED /* AddBookingViewController.swift */,
+				84055B821F08E85E00DE051A /* EditBookingViewController.swift */,
 			);
 			name = BookingController;
 			sourceTree = "<group>";
@@ -288,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				849859AE1EFEC5C5000B464C /* ListClientViewController.swift */,
+				84055B801F08D73300DE051A /* AddClientViewController.swift */,
 			);
 			name = ClientController;
 			sourceTree = "<group>";
@@ -315,15 +371,16 @@
 		84EB431F1EF8E98900A294B3 /* HanoiTourist */ = {
 			isa = PBXGroup;
 			children = (
+				849859AD1EFEC59E000B464C /* ClientController */,
+				841FC86B1F07EDEB0064F3B3 /* BillController */,
+				8446C92C1F0150A900EF86CD /* BookingController */,
+				841FC8651F07DEF60064F3B3 /* TicketController */,
+				841FC8601F07D0B20064F3B3 /* SeasonTourController */,
 				841302071F03676F008D669C /* Dialog */,
 				841302021F035820008D669C /* CustomObject */,
-				8446C92C1F0150A900EF86CD /* BookingController */,
 				8446C92B1F0144B600EF86CD /* Util */,
-				849859AD1EFEC59E000B464C /* ClientController */,
 				84528F121EFE0BFB0008BADE /* CompanyController */,
 				84528F111EFE03AD0008BADE /* SideMenuController */,
-				84EB43221EF8E98900A294B3 /* ViewController.swift */,
-				84F7B2E01EFA5D4600C6C9C7 /* DataController.swift */,
 				84320F501EFCB28F002B127C /* DAO */,
 				84153D6F1EFD20EF0048D411 /* SupportFile */,
 				84153D6C1EFD1D660048D411 /* StoryBoard */,
@@ -462,14 +519,20 @@
 				8432D7481F025A9B00C59604 /* Booking.storyboard in Resources */,
 				84EB432E1EF8E98900A294B3 /* LaunchScreen.storyboard in Resources */,
 				84528F141EFE0C330008BADE /* Company.storyboard in Resources */,
+				841FC8511F07C5B90064F3B3 /* BookingTableViewCell.xib in Resources */,
 				84B456B91F04A819004A23FF /* ClientInfomationView.xib in Resources */,
 				84EB432B1EF8E98900A294B3 /* Assets.xcassets in Resources */,
+				841FC8551F07C7B00064F3B3 /* BillTableViewCell.xib in Resources */,
 				84620BD41F02A8A2009CED07 /* TicketInfomationView.xib in Resources */,
 				84153D711EFD27E30048D411 /* Client.storyboard in Resources */,
 				84B456C51F04AF29004A23FF /* ClientTableViewCell.xib in Resources */,
-				841302061F03583B008D669C /* TicketTableViewCell.xib in Resources */,
+				841302061F03583B008D669C /* SeasonTourTableViewCell.xib in Resources */,
+				841FC86F1F07EE170064F3B3 /* Bill.storyboard in Resources */,
 				841302011F03533B008D669C /* FindSeasonTourDialog.storyboard in Resources */,
+				841FC85F1F07D03C0064F3B3 /* SeasonTour.storyboard in Resources */,
 				84EB43261EF8E98900A294B3 /* Main.storyboard in Resources */,
+				841FC8691F07E3110064F3B3 /* Ticket.storyboard in Resources */,
+				841FC85D1F07CB810064F3B3 /* TicketTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,12 +560,14 @@
 				8447DB651F07761A00201E8F /* ConfirmSaveBookingDialog.swift in Sources */,
 				84B456C11F04ACF3004A23FF /* ListClientDialog.swift in Sources */,
 				840F1BFF1F03F8E100D144F9 /* FindSeasonTourByPlaceDialog.swift in Sources */,
+				841FC8641F07D0FB0064F3B3 /* ListSeasonTourViewController.swift in Sources */,
 				84A1D5E81F03D26F00527BED /* AddBookingViewController.swift in Sources */,
 				84B456C41F04AF29004A23FF /* ClientTableViewCell.swift in Sources */,
 				84B456BF1F04ACE3004A23FF /* ListClientContainerDialog.swift in Sources */,
 				84320F541EFCBF85002B127C /* DAO.swift in Sources */,
+				84055B811F08D73400DE051A /* AddClientViewController.swift in Sources */,
 				84EB43291EF8E98900A294B3 /* HanoiTourist.xcdatamodeld in Sources */,
-				84F7B2E11EFA5D4600C6C9C7 /* DataController.swift in Sources */,
+				841FC86D1F07EDFD0064F3B3 /* ListBillViewController.swift in Sources */,
 				8447DB671F07836D00201E8F /* ChoosePayTypeDialog.swift in Sources */,
 				84EB43231EF8E98900A294B3 /* ViewController.swift in Sources */,
 				841302091F03679E008D669C /* ListSeasonTourDialog.swift in Sources */,
@@ -515,24 +580,27 @@
 				84EB43211EF8E98900A294B3 /* AppDelegate.swift in Sources */,
 				84320F561EFCC409002B127C /* DAOProtocol.swift in Sources */,
 				84B456BB1F04A838004A23FF /* ClientInfomationView.swift in Sources */,
+				841FC85C1F07CB810064F3B3 /* TicketTableViewCell.swift in Sources */,
 				84320F641EFCE028002B127C /* TicketDAO.swift in Sources */,
 				8422000F1EFF71F100170315 /* NSManagedObjectFactory.swift in Sources */,
-				84320F5A1EFCC956002B127C /* MemberCardDAO.swift in Sources */,
 				84320F5C1EFCCBD1002B127C /* BillDAO.swift in Sources */,
-				841301FC1F035294008D669C /* FindTicketDialogViewController.swift in Sources */,
+				841FC8501F07C5B90064F3B3 /* BookingTableViewCell.swift in Sources */,
+				841FC8541F07C7B00064F3B3 /* BillTableViewCell.swift in Sources */,
 				849859AF1EFEC5C5000B464C /* ListClientViewController.swift in Sources */,
 				84320F5E1EFCCD7D002B127C /* BookingDAO.swift in Sources */,
 				84320F621EFCDF94002B127C /* EmployeeDAO.swift in Sources */,
 				84320F601EFCD969002B127C /* ClientDAO.swift in Sources */,
 				84528F181EFE16220008BADE /* SideMenuAction.swift in Sources */,
 				84153D751EFD441F0048D411 /* SideMenuContainerViewController.swift in Sources */,
+				84055B831F08E85E00DE051A /* EditBookingViewController.swift in Sources */,
 				84528F161EFE14E40008BADE /* CompanyViewController.swift in Sources */,
 				844864031F02126D006C5310 /* Util.swift in Sources */,
 				84620BD61F02AFFC009CED07 /* TicketInfomationView.swift in Sources */,
 				84320F581EFCC94B002B127C /* TourDAO.swift in Sources */,
-				841302051F03583B008D669C /* TicketTableViewCell.swift in Sources */,
+				841302051F03583B008D669C /* SeasonTourTableViewCell.swift in Sources */,
 				84B456C71F04B3D8004A23FF /* FindClientByNameDialog.swift in Sources */,
 				84320F521EFCB2BE002B127C /* CompanyDAO.swift in Sources */,
+				841FC8671F07DF0C0064F3B3 /* ListTicketViewController.swift in Sources */,
 				84D920201EFFFA7C00CC0626 /* InitDefaultDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

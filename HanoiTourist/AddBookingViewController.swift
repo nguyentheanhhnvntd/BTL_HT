@@ -8,12 +8,16 @@
 
 import UIKit
 
-class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogDelegate, FindSeasonTourByPlaceDialogDelegate, ChooseSlotAndPaidDialogDelegate, FindClientByNameDialogDelegate, ListClientContainerDialogDelegate, TicketInfomationViewDelegate, ClientInfomationViewDelegate, ConfirmSaveBookingDialogDelegate {
+protocol AddBookingViewControllerDelegate {
+    func addBookingDone()
+}
+class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogDelegate, FindSeasonTourByPlaceDialogDelegate, ChooseSlotAndPaidDialogDelegate, FindClientByNameDialogDelegate, ListClientContainerDialogDelegate, TicketInfomationViewDelegate, ClientInfomationViewDelegate, ConfirmSaveBookingDialogDelegate, AddClientViewControllerDelegate {
     
     var ticketInfomationView: TicketInfomationView!
     var clientInfomationView: ClientInfomationView!
+    var delegate: AddBookingViewControllerDelegate!
     
-    var employee = EmployeeDAO.init().getAll()![0] as! Employee
+    var employee: Employee!
     var client: Client!
     var listChooseTicket = [Ticket]()
     var booking: Booking!
@@ -89,29 +93,38 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     }
     
     func ticketInfoSwipeToLeft() {
-        if let index = listChooseTicket.index(of: ticketInfomationView.ticket) {
-            if index < listChooseTicket.count - 1 {
-                ticketInfomationView.ticket = listChooseTicket[index + 1]
-                ticketInfomationView.setInfo()
-            } else if index == listChooseTicket.count - 1 {
-                ticketInfomationView.isHidden = true
-                clientInfomationView.isHidden = false
+        if let ticket = ticketInfomationView.ticket {
+            if let index = listChooseTicket.index(of: ticket) {
+                if index < listChooseTicket.count - 1 {
+                    ticketInfomationView.ticket = listChooseTicket[index + 1]
+                    ticketInfomationView.setInfo()
+                } else if index == listChooseTicket.count - 1 {
+                    ticketInfomationView.isHidden = true
+                    clientInfomationView.isHidden = false
+                }
             }
+        } else {
+            ticketInfomationView.isHidden = true
+            clientInfomationView.isHidden = false
         }
     }
     
     func ticketInfoSwipeToRight() {
-        if let index = listChooseTicket.index(of: ticketInfomationView.ticket) {
-            if index > 0 {
-                ticketInfomationView.ticket = listChooseTicket[index - 1]
-                ticketInfomationView.setInfo()
+        if let ticket = ticketInfomationView.ticket {
+            if let index = listChooseTicket.index(of: ticket) {
+                if index > 0 {
+                    ticketInfomationView.ticket = listChooseTicket[index - 1]
+                    ticketInfomationView.setInfo()
+                }
             }
         }
     }
     
     func clientInfoSwipeToRight() {
-        ticketInfomationView.isHidden = false
-        clientInfomationView.isHidden = true
+        if listChooseTicket.count > 0 {
+            ticketInfomationView.isHidden = false
+            clientInfomationView.isHidden = true
+        }
     }
     
     func choose(seasonTour: SeasonTour) {
@@ -133,20 +146,22 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     func comfirm(ticket: Ticket) {
         listChooseTicket.append(ticket)
         ticketInfomationView.ticket = ticket
+        print(listChooseTicket.count)
         ticketInfomationView.setInfo()
+        
+        let totalSlot = Int(ticket.seasonTour!.totalSlot) - Int(ticket.adultSlot) - Int(ticket.childrenSlot)
+        ticket.seasonTour!.totalSlot = Int16(totalSlot)
+        
         clientInfomationView.isHidden = true
         ticketInfomationView.isHidden = false
         
-        //        let list = booking.tickets?.allObjects as! [Ticket]
-        //        for ticket in list {
-        //            print("\(ticket.price)" + " VNDDD")
-        //        }
     }
     
     func findClient(name: String) {
         let listClient = ClientDAO.init().findBy(name: name)
         if listClient.count == 0 {
-            showToast(message: "Doesn't match any client")
+//            showToast(message: "Doesn't match any client")
+            showAddClientVC()
         } else {
             showListClient(listClient: listClient)
         }
@@ -162,6 +177,10 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     
     func choose(client: Client) {
         self.client = client
+        showClientInfoView()
+    }
+    
+    func showClientInfoView() {
         clientInfomationView.client = client
         clientInfomationView.setInfo()
         ticketInfomationView.isHidden = true
@@ -190,35 +209,48 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     }
     
     func payLater() {
-        
-        saveTicketsAndUpdateSeasonTour()
+        print("payLater")
         
         booking.paid = false
         booking.bookingDate = Date.init(timeIntervalSinceNow: 0) as NSDate
+        saveTicketsAndUpdateSeasonTour()
         BookingDAO.init().add(managedObject: booking)
+        
+        self.dismiss(animated: false, completion: {
+            self.delegate.addBookingDone()
+        })
     }
     
     func payRightNow(payType: String) {
-        saveTicketsAndUpdateSeasonTour()
+        print("payRightNow \(payType)")
         booking.paid = true
         booking.bookingDate = Date.init(timeIntervalSinceNow: 0) as NSDate
-        BookingDAO.init().add(managedObject: booking)
         let bill = NSManagedObjectFactory.createBillNSManagedObject(booking: booking, employee: employee, payType: payType, payDate: booking.bookingDate!)
+        var listBill = [Bill]()
+        listBill.append(bill)
+        booking.bills = NSSet.init(array: listBill)
+        saveTicketsAndUpdateSeasonTour()
+        BookingDAO.init().add(managedObject: booking)
         BillDAO.init().add(managedObject: bill)
+        
+        self.dismiss(animated: false, completion: {
+            self.delegate.addBookingDone()
+        })
     }
     
     func saveTicketsAndUpdateSeasonTour() {
-        let tickets = booking.tickets?.allObjects as! [Ticket]
+        print("saveTicketsAndUpdateSeasonTour")
         let ticketDAO = TicketDAO.init()
         let seasonTourDAO = SeasonTourDAO.init()
-        for ticket in tickets {
-            ticketDAO.add(managedObject: ticket)
+        for ticket in listChooseTicket {
+            ticket.booking = booking
             let seasonTour = ticket.seasonTour!
-            let totalSlot = Int(seasonTour.totalSlot) - Int(ticket.adultSlot) - Int(ticket.childrenSlot)
-            seasonTour.totalSlot = Int16(totalSlot)
-            print(ticket.seasonTour!.totalSlot)
-            seasonTourDAO.update(managedObject: ticket.seasonTour!)
+            //            let totalSlot = Int(seasonTour.totalSlot) - Int(ticket.adultSlot) - Int(ticket.childrenSlot)
+            //            seasonTour.totalSlot = Int16(totalSlot)
+            ticketDAO.add(managedObject: ticket)
+            seasonTourDAO.update(managedObject: seasonTour)
         }
+        
     }
     
     func delete(ticket: Ticket) {
@@ -235,5 +267,18 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
                 ticketInfomationView.setInfo()
             }
         }
+    }
+    
+    func showAddClientVC() {
+        let addClientVC = UIStoryboard.init(name: "Client", bundle: nil).instantiateViewController(withIdentifier: "AddClientViewController") as! AddClientViewController
+        addClientVC.delegate = self
+        addClientVC.message = "Not found"
+        self.present(addClientVC, animated: false, completion: nil)
+    }
+    
+    func returnClient(client: Client) {
+        self.client = client
+        showToast(message: "Client Added")
+        showClientInfoView()
     }
 }

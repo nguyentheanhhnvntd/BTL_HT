@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="J6c-H3-mgL" customClass="BillTableViewCell" customModule="HanoiTourist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J6c-H3-mgL" id="LV0-Xf-ffW">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-oF-uu8">
+                        <rect key="frame" x="16" y="8" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-By-x4c">
+                        <rect key="frame" x="16" y="37" width="30" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah4-4I-F2J">
+                        <rect key="frame" x="16" y="66" width="44.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-hX-cH9">
+                        <rect key="frame" x="16" y="95" width="74.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-Fu-1YO">
+                        <rect key="frame" x="244.5" y="32" width="69.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PSE-Fu-1YO" secondAttribute="trailing" constant="16" id="6h2-Ov-suA"/>
+                    <constraint firstItem="CY8-By-x4c" firstAttribute="top" secondItem="fjZ-oF-uu8" secondAttribute="bottom" constant="8" id="7DI-1J-A9L"/>
+                    <constraint firstItem="fjZ-oF-uu8" firstAttribute="top" secondItem="LV0-Xf-ffW" secondAttribute="top" constant="8" id="94B-XU-w7r"/>
+                    <constraint firstItem="PSE-Fu-1YO" firstAttribute="top" secondItem="LV0-Xf-ffW" secondAttribute="top" constant="32" id="AIW-Ca-4N8"/>
+                    <constraint firstItem="5ud-hX-cH9" firstAttribute="top" secondItem="Ah4-4I-F2J" secondAttribute="bottom" constant="8" id="DB0-YG-epg"/>
+                    <constraint firstItem="Ah4-4I-F2J" firstAttribute="leading" secondItem="LV0-Xf-ffW" secondAttribute="leadingMargin" constant="8" id="Dx5-s0-oat"/>
+                    <constraint firstItem="5ud-hX-cH9" firstAttribute="leading" secondItem="LV0-Xf-ffW" secondAttribute="leadingMargin" constant="8" id="Si1-2m-ChV"/>
+                    <constraint firstItem="fjZ-oF-uu8" firstAttribute="leading" secondItem="LV0-Xf-ffW" secondAttribute="leading" constant="16" id="clp-ab-l6W"/>
+                    <constraint firstItem="CY8-By-x4c" firstAttribute="leading" secondItem="LV0-Xf-ffW" secondAttribute="leadingMargin" constant="8" id="mnh-VV-RBm"/>
+                    <constraint firstAttribute="bottom" secondItem="5ud-hX-cH9" secondAttribute="bottom" constant="8" id="qgG-Aq-Tid"/>
+                    <constraint firstItem="Ah4-4I-F2J" firstAttribute="top" secondItem="CY8-By-x4c" secondAttribute="bottom" constant="8" id="xlU-PP-dDr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="billDate" destination="fjZ-oF-uu8" id="e7h-cv-CSG"/>
+                <outlet property="client" destination="Ah4-4I-F2J" id="y6T-NR-mBv"/>
+                <outlet property="employee" destination="5ud-hX-cH9" id="ku3-JA-BQD"/>
+                <outlet property="payType" destination="PSE-Fu-1YO" id="Rhc-pf-Zom"/>
+                <outlet property="slot" destination="CY8-By-x4c" id="85h-Tq-jlq"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="22"/>
+        </tableViewCell>
+    </objects>
+</document>
