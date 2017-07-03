@@ -65,6 +65,7 @@
 		84B456C51F04AF29004A23FF /* ClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B456C31F04AF29004A23FF /* ClientTableViewCell.xib */; };
 		84B456C71F04B3D8004A23FF /* FindClientByNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B456C61F04B3D8004A23FF /* FindClientByNameDialog.swift */; };
 		84D920201EFFFA7C00CC0626 /* InitDefaultDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */; };
+		84DFCC461F09F694006268B9 /* HanoiTouristDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCC451F09F694006268B9 /* HanoiTouristDAOTests.swift */; };
 		84EB43211EF8E98900A294B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43201EF8E98900A294B3 /* AppDelegate.swift */; };
 		84EB43231EF8E98900A294B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB43221EF8E98900A294B3 /* ViewController.swift */; };
 		84EB43261EF8E98900A294B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EB43241EF8E98900A294B3 /* Main.storyboard */; };
@@ -76,6 +77,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		84DFCC481F09F694006268B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84EB43151EF8E98900A294B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84EB431C1EF8E98900A294B3;
+			remoteInfo = HanoiTourist;
+		};
 		84EB43351EF8E98900A294B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84EB43151EF8E98900A294B3 /* Project object */;
@@ -151,6 +159,9 @@
 		84B456C31F04AF29004A23FF /* ClientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientTableViewCell.xib; sourceTree = "<group>"; };
 		84B456C61F04B3D8004A23FF /* FindClientByNameDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindClientByNameDialog.swift; sourceTree = "<group>"; };
 		84D9201F1EFFFA7C00CC0626 /* InitDefaultDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitDefaultDatabase.swift; sourceTree = "<group>"; };
+		84DFCC431F09F694006268B9 /* HanoiTouristDAOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiTouristDAOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DFCC451F09F694006268B9 /* HanoiTouristDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiTouristDAOTests.swift; sourceTree = "<group>"; };
+		84DFCC471F09F694006268B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84EB431D1EF8E98900A294B3 /* HanoiTourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanoiTourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB43201EF8E98900A294B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EB43221EF8E98900A294B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +179,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		84DFCC401F09F694006268B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84EB431A1EF8E98900A294B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,12 +366,22 @@
 			name = ClientController;
 			sourceTree = "<group>";
 		};
+		84DFCC441F09F694006268B9 /* HanoiTouristDAOTests */ = {
+			isa = PBXGroup;
+			children = (
+				84DFCC451F09F694006268B9 /* HanoiTouristDAOTests.swift */,
+				84DFCC471F09F694006268B9 /* Info.plist */,
+			);
+			path = HanoiTouristDAOTests;
+			sourceTree = "<group>";
+		};
 		84EB43141EF8E98900A294B3 = {
 			isa = PBXGroup;
 			children = (
 				84EB431F1EF8E98900A294B3 /* HanoiTourist */,
 				84EB43371EF8E98900A294B3 /* HanoiTouristTests */,
 				84EB43421EF8E98900A294B3 /* HanoiTouristUITests */,
+				84DFCC441F09F694006268B9 /* HanoiTouristDAOTests */,
 				84EB431E1EF8E98900A294B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -364,6 +392,7 @@
 				84EB431D1EF8E98900A294B3 /* HanoiTourist.app */,
 				84EB43341EF8E98900A294B3 /* HanoiTouristTests.xctest */,
 				84EB433F1EF8E98900A294B3 /* HanoiTouristUITests.xctest */,
+				84DFCC431F09F694006268B9 /* HanoiTouristDAOTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -409,6 +438,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		84DFCC421F09F694006268B9 /* HanoiTouristDAOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DFCC4A1F09F694006268B9 /* Build configuration list for PBXNativeTarget "HanoiTouristDAOTests" */;
+			buildPhases = (
+				84DFCC3F1F09F694006268B9 /* Sources */,
+				84DFCC401F09F694006268B9 /* Frameworks */,
+				84DFCC411F09F694006268B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84DFCC491F09F694006268B9 /* PBXTargetDependency */,
+			);
+			name = HanoiTouristDAOTests;
+			productName = HanoiTouristDAOTests;
+			productReference = 84DFCC431F09F694006268B9 /* HanoiTouristDAOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		84EB431C1EF8E98900A294B3 /* HanoiTourist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EB43481EF8E98900A294B3 /* Build configuration list for PBXNativeTarget "HanoiTourist" */;
@@ -472,6 +519,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Thế Anh Nguyễn";
 				TargetAttributes = {
+					84DFCC421F09F694006268B9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T4H7Z4TQ8B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84EB431C1EF8E98900A294B3;
+					};
 					84EB431C1EF8E98900A294B3 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = T4H7Z4TQ8B;
@@ -505,11 +558,19 @@
 				84EB431C1EF8E98900A294B3 /* HanoiTourist */,
 				84EB43331EF8E98900A294B3 /* HanoiTouristTests */,
 				84EB433E1EF8E98900A294B3 /* HanoiTouristUITests */,
+				84DFCC421F09F694006268B9 /* HanoiTouristDAOTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		84DFCC411F09F694006268B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84EB431B1EF8E98900A294B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,6 +614,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		84DFCC3F1F09F694006268B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DFCC461F09F694006268B9 /* HanoiTouristDAOTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84EB43191EF8E98900A294B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +693,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		84DFCC491F09F694006268B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84EB431C1EF8E98900A294B3 /* HanoiTourist */;
+			targetProxy = 84DFCC481F09F694006268B9 /* PBXContainerItemProxy */;
+		};
 		84EB43361EF8E98900A294B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84EB431C1EF8E98900A294B3 /* HanoiTourist */;
@@ -656,6 +730,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		84DFCC4B1F09F694006268B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T4H7Z4TQ8B;
+				INFOPLIST_FILE = HanoiTouristDAOTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nta.example.HanoiTouristDAOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanoiTourist.app/HanoiTourist";
+			};
+			name = Debug;
+		};
+		84DFCC4C1F09F694006268B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T4H7Z4TQ8B;
+				INFOPLIST_FILE = HanoiTouristDAOTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nta.example.HanoiTouristDAOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanoiTourist.app/HanoiTourist";
+			};
+			name = Release;
+		};
 		84EB43461EF8E98900A294B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -836,6 +938,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84DFCC4A1F09F694006268B9 /* Build configuration list for PBXNativeTarget "HanoiTouristDAOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DFCC4B1F09F694006268B9 /* Debug */,
+				84DFCC4C1F09F694006268B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		84EB43181EF8E98900A294B3 /* Build configuration list for PBXProject "HanoiTourist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

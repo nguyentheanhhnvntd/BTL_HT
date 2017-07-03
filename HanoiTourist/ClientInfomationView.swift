@@ -35,7 +35,9 @@ class ClientInfomationView: UIView {
         name.text = client.name
         phone.text = client.phone
         email.text = client.email
-        address.text = client.address
+        var addressT = client.address!
+        addressT = addressT.substring(to: addressT.index(addressT.startIndex, offsetBy: 20))
+        address.text = addressT + "..."
         carType.text = client.cardType
         cardNumber.text = client.cardID
         

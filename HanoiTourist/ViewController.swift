@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
-        createDefaultInfo()
+//        createDefaultInfo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,19 +47,5 @@ class ViewController: UIViewController {
         InitDefaultDatabase.addClientInfo()
         InitDefaultDatabase.addEmployeeInfo()
     }
-    
-//    func setInfo() {
-//        let clientDAO = ClientDAO.init()
-//        let list = clientDAO.getAll()! as! [Client]
-//        var id = 101
-//        for client in list {
-//            client.cardID = "\(id)"
-//            id += 1
-//            client.cardType = "Silver"
-//            clientDAO.update(managedObject: client)
-//        }
-//        print("\n\n\n")
-//        clientDAO.getAll()
-//    }
 }
 

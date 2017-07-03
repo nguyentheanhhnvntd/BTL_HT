@@ -14,6 +14,7 @@ protocol  SeasonTourTableViewCellDelegate {
 
 class SeasonTourTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var startDate: UILabel!
     var seasonTour: SeasonTour!
     var delegate: SeasonTourTableViewCellDelegate!
     

@@ -31,7 +31,7 @@ class ListSeasonTourDialog: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 73
+        return 107
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath:
@@ -47,6 +47,14 @@ class ListSeasonTourDialog: UIViewController, UITableViewDelegate, UITableViewDa
         cell.slot.text = "\(seasonTour.totalSlot)"
         cell.price.text = "\(seasonTour.price) vnd"
         cell.seasonTour = seasonTour
+        
+        var date = String(describing: seasonTour.start!)
+        date = date.substring(to: date.index(date.startIndex, offsetBy: 19))
+        
+        let (day, night) = Util.convertDuration(duration: (seasonTour.tour?.duration)!)
+        
+        cell.startDate.text = date + ", (\(day)d/\(night)n)"
+        
         cell.delegate = self
         return cell
         

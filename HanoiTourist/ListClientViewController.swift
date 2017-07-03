@@ -39,7 +39,7 @@ class ListClientViewController: UIViewController, UITableViewDelegate, UITableVi
         let client = listClient[indexPath.row]
         
         cell.name.text = "\(client.name!)"
-        cell.address.text = "\(client.address!)"
+        cell.address.text = "Phone: \(client.phone!)"
         cell.memberCardType.text = "Card type: \(client.cardType!)"
 //        cell.delegate = self
         cell.client = client

@@ -210,7 +210,6 @@ class AddBookingViewController: UIViewController, ListSeasonTourContainerDialogD
     
     func payLater() {
         print("payLater")
-        
         booking.paid = false
         booking.bookingDate = Date.init(timeIntervalSinceNow: 0) as NSDate
         saveTicketsAndUpdateSeasonTour()
